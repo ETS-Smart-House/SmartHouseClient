@@ -1,5 +1,5 @@
 body{
-    background-color: #010228;
+    background-color: #31393c;
 }
 div{
     margin-top: 300px;
@@ -19,16 +19,17 @@ div img{
         height: 0px;
         }
     25%{
-        filter: drop-shadow(0px 0px 500px 250px #0769e0da);
+        box-shadow: 0px 0px 500px 250px #2176ff;
     }
     50%{
-        filter: drop-shadow(0px 0px 1000px 500px #0769e0a1);
+        box-shadow: 0px 0px 1000px 500px #2176ff;
         width: 200px;
         height: 200px;
         transform: rotate(1turn);
     }
     75%{
-        filter: drop-shadow(0px 0px 500px 250px #0769e0a1);
+        box-shadow: 0px 0px 500px 250px #2176ff;
+        
     }
     100%{
         width: 0px;
