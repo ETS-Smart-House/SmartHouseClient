@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Poppons:100,200,300,400,500,600,700,800,900');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color:white;
+}
+body{
+    background-color: #010228;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+section{
+    padding: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    max-height:500px ;
+    background-color: #076AE0;
+    border-radius: 20px;
+    box-shadow:  0px 0px 50px 15px #076AE0;
+}
+section .box{
+    padding: 10px;
+    max-width: 900px;
+    height:500px ;
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+}
+section .box button{
+    margin-top: 20px;
+    width: 500px;
+    height: 100px;
+    color: black;
+    border-radius: 10px;
+    outline: none;
+    margin-right: 50px;
+    font-size: 19pt;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    border: none;
+}
+section .box .production p{
+    text-align: left;
+    font-size: 10pt;
+    letter-spacing: 2px;
+    color: #004da8;
+    margin: 2px;
+}
+section .box .production p:nth-child(5){
+    margin-top: 20px;
+}
+section .box .production p:nth-child(5),
+section .box .production p:nth-child(6){
+    text-align: right;
+}
+section .description{
+    font-size: 19pt;
+    letter-spacing: 2px;
+}
+section .description p:nth-child(1){
+    text-align: center;
+     margin-bottom: 10px;
+}
+section .box button:focus{
+    border: none;
+    outline: none;
+}
+section .box button:hover + .production{
+    color: wheat;
+}
+section .box :hover{
+    background: var(--color);
+    transition: 1s;
+    color: white;
+    box-shadow:0 0 10px var(--color);
+}
