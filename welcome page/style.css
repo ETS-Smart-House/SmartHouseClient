@@ -19,7 +19,7 @@ section{
     padding: 30px;
     max-width: 900px;
     max-height:500px ;
-    background-color: #076AE0;
+    background-color: #010228;
     border-radius: 20px;
     box-shadow:  0px 0px 50px 15px #076AE0;
 
@@ -57,15 +57,15 @@ section .description p:nth-child(1){
 section .box button{
     width: 500px;
     height: 100px;
-    color: black;
+    color: #010228;
     border-radius: 10px;
     outline: none;
     margin-right: 50px;
     font-size: 19pt;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #076AE0;
     transition: 1s;
-    border: none;
+    border: 5px solid transparent;
 }
 
 section .box button:focus{
@@ -80,4 +80,5 @@ section .box :hover{
     transition: 1s;
     color: white;
     box-shadow:0 0 10px var(--color);
+    border: 5px solid #010228;
 }
