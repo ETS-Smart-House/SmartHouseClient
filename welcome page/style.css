@@ -14,25 +14,47 @@ body{
     min-height: 80vh;
 }
 section{
-    padding: 35px;
     display: flex;
     flex-wrap: wrap;
+    padding: 30px;
     max-width: 900px;
     max-height:500px ;
     background-color: #076AE0;
     border-radius: 20px;
     box-shadow:  0px 0px 50px 15px #076AE0;
+
 }
 section .box{
-    padding: 10px;
-    max-width: 900px;
-    height:500px ;
     display: flex;
+    max-width: 960px;
     justify-content: space-around;
     margin: 50px auto;
+
+}
+section .box .production{
+    display: flex;
+    flex-direction: column;
+}
+section .box .production p{
+    text-align: left;
+    font-size: 10pt;
+    letter-spacing: 2px;
+    color: #ffffff48;
+}
+section .description p:nth-child(1){
+    margin-bottom: 10px;
+}
+section .box .production p:nth-child(5){
+    margin-top: 10px;
+}
+section .description{
+    font-size: 19pt;
+    letter-spacing: 1px;
+}
+section .description p:nth-child(1){
+    text-align: center;
 }
 section .box button{
-    margin-top: 20px;
     width: 500px;
     height: 100px;
     color: black;
@@ -45,28 +67,7 @@ section .box button{
     transition: 1s;
     border: none;
 }
-section .box .production p{
-    text-align: left;
-    font-size: 10pt;
-    letter-spacing: 2px;
-    color: #004da8;
-    margin: 2px;
-}
-section .box .production p:nth-child(5){
-    margin-top: 20px;
-}
-section .box .production p:nth-child(5),
-section .box .production p:nth-child(6){
-    text-align: right;
-}
-section .description{
-    font-size: 19pt;
-    letter-spacing: 2px;
-}
-section .description p:nth-child(1){
-    text-align: center;
-     margin-bottom: 10px;
-}
+
 section .box button:focus{
     border: none;
     outline: none;
