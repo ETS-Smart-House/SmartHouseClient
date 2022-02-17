@@ -19,16 +19,16 @@ div img{
         height: 0px;
         }
     25%{
-        box-shadow: 0px 0px 20px 50px #0769e0da;
+        box-shadow: 0px 0px 500px 250px #0769e0da;
     }
     50%{
-        box-shadow: 0px 0px 150px 150px #0769e0a1;
+        box-shadow: 0px 0px 1000px 500px #0769e0a1;
         width: 200px;
         height: 200px;
         transform: rotate(1turn);
     }
     75%{
-        box-shadow: 0px 0px 150px 150px #0769e0a1;
+        box-shadow: 0px 0px 500px 250px #0769e0a1;
         
     }
     100%{
