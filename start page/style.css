@@ -19,16 +19,16 @@ div img{
         height: 0px;
         }
     25%{
-        box-shadow: 0px 0px 500px 100px rgba(7,106,224,0.74);
+        box-shadow: 0px 0px 500px 100px rgba(7,106,224,1);
     }
     50%{
-        box-shadow: 0px 0px 600px 100px rgba(7,106,224,1.80);
+        box-shadow: 0px 0px 600px 100px rgba(7,106,224,1);
         width: 200px;
         height: 200px;
         transform: rotate(1turn);
     }
     75%{
-        box-shadow: 0px 0px 500px 100px rgba(7,106,224,0.74);
+        box-shadow: 0px 0px 500px 100px rgba(7,106,224,1);
         
     }
     100%{
