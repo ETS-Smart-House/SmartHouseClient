@@ -1,0 +1,2 @@
+# SmartHouse
+Projekat za takmicenje
