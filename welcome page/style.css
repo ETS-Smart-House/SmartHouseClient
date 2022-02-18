@@ -7,74 +7,105 @@
     color:white;
 }
 body{
-    background-color: #31393c;
+    background-color: #469ef7;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 section{
-    margin: 50px auto;
     display: flex;
-    padding: 30px;
+    padding: 20px;
     max-width: 1700px;
     height:800px ;
     background-color: #2176ff;
     border-radius: 20px;
+    margin: 50px auto;
 }
 
-section .description img{
-    height: 500px;
-    width: 500px;
-}
-
-section .box{
+section .box1{
     display: flex;
+    flex-direction: column;
     max-width: 960px;
     justify-content: space-around;
     margin: 50px auto;
-
 }
-section .box .production{
+
+section .description{
     display: flex;
     flex-direction: column;
-}
-section .box .production p{
-    text-align: left;
-    font-size: 10pt;
-    letter-spacing: 2px;
-    color: #ffffff48;
-}
-section .description p:nth-child(1){
-    margin-bottom: 10px;
+    font-size: 19pt;
+    letter-spacing: 1px;
 }
 section .box .production p:nth-child(5){
     margin-top: 10px;
 }
-section .description{
-    font-size: 19pt;
-    letter-spacing: 1px;
-}
 section .description p:nth-child(1){
     text-align: center;
 }
-section .box button{
-    width: 500px;
-    height: 100px;
-    color: #2176ff;
-    background-color: #0d1f2d;
-    border-radius: 10px;
+section .box1 button{
+    max-width: 800px;
+    height: 200px;
+    color: #000;
+    font-weight: bold;
+    background-color: #f79824;
+    box-shadow: 0px 0px 22px 10px #0062ff;
+    border-radius: 200px;
     outline: none;
-    margin-right: 50px;
+    margin-right: 10px;
     font-size: 19pt;
     position: relative;
     transition: 1s;
-    border: 5px solid transparent;
+    border: 2px solid #2176ff;
 }
 
-section .box button:focus{
-    border: none;
-    outline: none;
+section .box1 .production p{
+    text-align: left;
+    font-size: 10pt;
+    letter-spacing: 2px;
+    color: #fff;
 }
-section .box button:hover + .production{
-    color: wheat;
+
+.imgHolder{
+    display: flex;
+    align-items: center;
+
+}
+.imgHolder img{
+    width: 600px;
+    height: 600px;
+}
+.typing1,
+.typing2,
+.typing3,
+.typing4 {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 10pt;
+}
+.typing1{
+    width:16ch;
+    animation: typing 2s steps(16), blink .2s step-end infinite alternate;
+}
+.typing2{
+    width:54ch;
+    animation: typing 2s steps(54), blink .2s step-end infinite alternate;
+}
+.typing3{
+    width:11ch;
+    animation: typing 2s steps(11), blink .2s step-end infinite alternate;
+}
+.typing4{
+    width:29ch;
+    animation: typing 2s steps(29), blink .2s step-end infinite alternate;
+}
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
 }
