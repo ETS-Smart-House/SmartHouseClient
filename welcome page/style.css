@@ -7,23 +7,26 @@
     color:white;
 }
 body{
-    background-color: #010228;
+    background-color: #31393c;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
 }
 section{
+    margin: 50px auto;
     display: flex;
-    flex-wrap: wrap;
     padding: 30px;
-    max-width: 900px;
-    max-height:500px ;
-    background-color: #0006b4;
+    max-width: 1700px;
+    height:800px ;
+    background-color: #2176ff;
     border-radius: 20px;
-    filter: drop-shadow(0px 0px 50px 15px #076AE0);
-
 }
+
+section .description img{
+    height: 500px;
+    width: 500px;
+}
+
 section .box{
     display: flex;
     max-width: 960px;
@@ -57,13 +60,13 @@ section .description p:nth-child(1){
 section .box button{
     width: 500px;
     height: 100px;
-    color: #010228;
+    color: #2176ff;
+    background-color: #0d1f2d;
     border-radius: 10px;
     outline: none;
     margin-right: 50px;
     font-size: 19pt;
     position: relative;
-    background-color: #076AE0;
     transition: 1s;
     border: 5px solid transparent;
 }
@@ -74,11 +77,4 @@ section .box button:focus{
 }
 section .box button:hover + .production{
     color: wheat;
-}
-section .box :hover{
-    background: var(--color);
-    transition: 1s;
-    color: white;
-    box-shadow:0 0 10px var(--color);
-    border: 5px solid #010228;
 }
