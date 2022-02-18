@@ -11,7 +11,6 @@ div{
 div img{
     border-radius: 50%;
     animation:logo 3s ease-in-out forwards;
-    border: 3px solid #0062ff;
 }
 
 @keyframes logo {
