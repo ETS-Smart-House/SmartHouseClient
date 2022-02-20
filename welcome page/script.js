@@ -1,11 +1,12 @@
+let body = document.getElementsByTagName("body")[0];
 let section = document.getElementsByTagName("section")[0];
 let button = document.getElementsByTagName("button")[0];
 function mouseOver(){
-    section.style.backgroundColor = "#469ef7";
-    section.style.transition= "all 0.5s";
+    body.style.transition= "all 0.2s";
+    body.style.backgroundColor = "#2176ff";
 }
 function mouseLeave(){
-    section.style.backgroundColor = "#2176ff";
+    body.style.backgroundColor = "#469ef7";
 }
 
 
