@@ -84,19 +84,22 @@ section .box1 .production p{
 }
 .typing1{
     width:16ch;
-    animation: typing 2s steps(16), blink .2s step-end infinite alternate;
+    animation: typing 2s steps(16), blink .2s step-end forwards alternate;
 }
 .typing2{
     width:54ch;
     animation: typing 2s steps(54), blink .2s step-end infinite alternate;
+    animation-delay: 2s;
 }
 .typing3{
     width:11ch;
     animation: typing 2s steps(11), blink .2s step-end infinite alternate;
+    animation-delay: 4s;
 }
 .typing4{
     width:29ch;
     animation: typing 2s steps(29), blink .2s step-end infinite alternate;
+    animation-delay: 6s;
 }
 @keyframes typing {
     from {
