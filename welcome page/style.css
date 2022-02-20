@@ -39,18 +39,10 @@ section .box .production p:nth-child(5){
 section .description p:nth-child(1){
     text-align: center;
 }
-section .box1 button{
+section .box1 a{
+    text-align: center;
     max-width: 800px;
-    height: 200px;
-    color: #000;
-    font-weight: bold;
-    background-color: #1a73e8;
-    border-radius: 200px;
-    outline: none;
-    margin-right: 10px;
-    font-size: 19pt;
-    position: relative;
-    transition: 1s;
+    padding: 70px 150px 70px 150px; 
     border: 2px solid #1a73e8;
 }
 

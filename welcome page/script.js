@@ -1,3 +1,4 @@
+/*
 let body = document.getElementsByTagName("body")[0];
 let section = document.getElementsByTagName("section")[0];
 let button = document.getElementsByTagName("button")[0];
@@ -7,11 +8,12 @@ function mouseOver(){
     section.style.transition= "all 0.7s";
     section.style.backgroundColor = "#1a73e8";
     button.style.backgroundColor = "#252839";
-    img.innerHTML="<img src="assets/baner.png">";
+    img.innerHTML="<img src=\"https://github.com/djluka/SmartHouse/blob/main/welcome%20page/assets/baner.png\">";
 }
 function mouseLeave(){
     section.style.backgroundColor = "#252839";
     button.style.backgroundColor = "#1a73e8";
-    img.innerHTML="<img src="assets/baner1.png">";
+    img.innerHTML="<img src=\"https://github.com/djluka/SmartHouse/blob/main/welcome%20page/assets/baner1.png\">";
 
 }
+*/
