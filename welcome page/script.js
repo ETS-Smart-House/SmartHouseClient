@@ -8,9 +8,3 @@ function mouseOver(){
 function mouseLeave(){
     body.style.backgroundColor = "#469ef7";
 }
-
-
-let typing1 = document.getElementsByClassName("typing1").style;
-if (typing1.width = "16"){
-    alert(1)
-}
