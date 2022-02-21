@@ -59,7 +59,6 @@ a{
     letter-spacing: 5px;
     border-radius: 70px;
     transition: 1s;
-    overflow: hidden;
 }
 
 section .box1 ul li a:hover{
@@ -70,7 +69,7 @@ section .box1 ul li a:hover{
                 0 0 100px var(--color);
 }
 
-a::before{
+a::after{
     content: "";
     position: absolute;
     top: 250px;
@@ -103,8 +102,6 @@ section .box1 .production p{
 .typing3,
 .typing4 {
     white-space: nowrap;
-    overflow: hidden;
-
     font-size: 10pt;
     visibility: hidden;
     margin: 5px;
