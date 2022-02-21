@@ -39,11 +39,46 @@ section .box .production p:nth-child(5){
 section .description p:nth-child(1){
     text-align: center;
 }
-section .box1 a{
+section .box1 ul{
+    display: flex;
+
+}
+section .box1 ul li {
+    display: flex;
+    list-style: none;
+    flex: 1; 
+}
+a{
+    text-decoration: none;
+    margin: 20px;
+    padding: 50px;   
+    background-color: rgba(0, 98, 255, 0.1);
+    flex: 1;
     text-align: center;
-    max-width: 800px;
-    padding: 70px 150px 70px 150px; 
-    border: 2px solid #1a73e8;
+    font-size: 20pt;
+    letter-spacing: 5px;
+    border-radius: 70px;
+    transition: 1s;
+    overflow: hidden;
+}
+
+section .box1 ul li a:hover{
+    background-color: var(--color);
+    box-shadow: 0 0 10px var(--color),
+                0 0 30px var(--color),
+                0 0 60px var(--color),
+                0 0 100px var(--color);
+}
+
+a::before{
+    content: "";
+    position: absolute;
+    top: 250px;
+    width: 40px;
+    height: 600px;
+    background-color: var(--color);
+    transition: 1s;
+    animation: animate 2s linear infinite;
 }
 
 section .box1 .production p{
@@ -69,7 +104,7 @@ section .box1 .production p{
 .typing4 {
     white-space: nowrap;
     overflow: hidden;
-    font-family: monospace;
+
     font-size: 10pt;
     visibility: hidden;
     margin: 5px;
@@ -102,5 +137,13 @@ section .box1 .production p{
     100%{
         visibility: visible;
         border-right: none;
+    }
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    0%{
+        transform: rotate(360deg);
     }
 }

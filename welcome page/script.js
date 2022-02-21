@@ -1,6 +1,7 @@
+/*
 let body = document.getElementsByTagName("body")[0];
 let section = document.getElementsByTagName("section")[0];
-let button = document.getElementsByTagName("a")[0];
+let button = document.getElementsByTagName("button")[0];
 let img = document.getElementById("banner");
 function mouseOver(){
     body.style.transition= "all 0.7s";
@@ -13,3 +14,4 @@ function mouseLeave(){
     button.style.backgroundColor = "#1a73e8";
 
 }
+*/
