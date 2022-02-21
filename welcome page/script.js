@@ -1,4 +1,4 @@
-/*
+
 let body = document.getElementsByTagName("body")[0];
 let section = document.getElementsByTagName("section")[0];
 let button = document.getElementsByTagName("button")[0];
@@ -14,4 +14,3 @@ function mouseLeave(){
     button.style.backgroundColor = "#1a73e8";
 
 }
-*/
