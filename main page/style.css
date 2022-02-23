@@ -37,7 +37,7 @@ ul li button {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    -webkit-text-stroke: 1px var(--clr);
 }
 ul li button::before{
     content: attr(data-text);
