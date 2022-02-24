@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/logo.png">
-    <title>Pametna kuća</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>  
-        <div class="txt">
-            <p>1st floor</p>
-        </div>
-
-        <div class="box">
-            <input type="checkbox">
-            <label for="" class="onbtn">On</label>
-            <label for="" class="offbtn">Off</label>
-        </div>
-        
-    </div>
-
-<script src="script.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="assets/logo.png">
+        <title>Pametna kuća</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" 
+        crossorigin="anonymous">
+    </head>
+    <body>  
+        <nav>
+            <ul>
+                <li class="main">
+                    <button>Select floor</button>
+                    <div class="line"></div>
+                    <img src="assets/up-arrow.png" alt="Loading...">
+                    <img src="assets/down-arrow.png" alt="Loading...">
+                </li>
+                <ul class="subMenu">
+                    <li><button>first</button></li>
+                    <li><button>second</button></li>
+                </ul>
+            </ul>
+        </nav>
+        <script src="script.js"></script>
+    </body>
+</html>
