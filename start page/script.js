@@ -1,3 +1,3 @@
 function redirect(){
-    window.location.href = '/welcome%20page/index.html';
+    window.location.href = 'https://djluka.github.io/SmartHouse/welcome%20page/index.html';
 }
