@@ -18,45 +18,51 @@ img{
     width: 0;
     height: calc(180px/3);
     border-left: 1px solid #000;
-    position: absolute;
+    position: relative;
     left: 80%;
-    top: 5%;
-    transform: translateY(-5%);
+    transform: translate(-80%);
 }
-nav{
+.dropdown{
     position: relative;
     top: 30vh;
     left: 50%;
     transform: translateX(-50%);
-    border: 1px solid red;
     width: 600px;
-    height: 250px;
+    cursor: pointer;
 }
-nav ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-.main button{
-    position: relative;
-}
-.main img {
+.dropdown-content{
+    display: none;
     position: absolute;
-    left: 100%;
-    top: 5%;
-    transform: translateX(-170%);
+    align-items: center;
+    overflow: auto;
+    z-index: 1;
 }
-nav ul li button{
-border: 1px solid green;
+.dropdown-content button{
+    display: block;
+    width: 600px;
+    height: calc(180px/3);
+}
+.dropdown .dropbtn p{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-30% , -50%);
+    font-size: 2em;
+}
+.dropdown .dropbtn img {
+    position: absolute;
+    left: 93%;
+    top: 50%;
+    transform: translate(-93% , -50%);
+}
+.dropdown .dropbtn img:nth-child(3){
+    visibility: hidden;
+}
+.dropbtn{
 width: 600px;
 height: calc(250px/3);
 }
-.subMenu li:nth-child(1),
-.subMenu li:nth-child(2){
-    visibility: hidden;
-}
+.show {display: block;}
 @keyframes move {
     from{
         position: relative;

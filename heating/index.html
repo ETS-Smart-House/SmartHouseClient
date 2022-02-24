@@ -6,25 +6,21 @@
         <link rel="icon" href="assets/logo.png">
         <title>Pametna kuća</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
-        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" 
-        crossorigin="anonymous">
     </head>
     <body>  
-        <nav>
-            <ul>
-                <li class="main">
-                    <button>Select floor</button>
-                    <div class="line"></div>
-                    <img src="assets/up-arrow.png" alt="Loading...">
-                    <img src="assets/down-arrow.png" alt="Loading...">
-                </li>
-                <ul class="subMenu">
-                    <li><button>first</button></li>
-                    <li><button>second</button></li>
-                </ul>
-            </ul>
-        </nav>
+        <div class="dropdown">
+            <button  onclick="myFunction()" class="dropbtn" id="dugme">
+                <p>Select floor</p>
+                <div class="line"></div>
+                <img id="img1" src="assets/up-arrow.png" alt="Loading...">
+                <img id="img2" src="assets/down-arrow.png" alt="Loading...">
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                <button>first</button>
+                <button>second</button>
+            </div>
+        </div>
+
         <script src="script.js"></script>
     </body>
 </html>
