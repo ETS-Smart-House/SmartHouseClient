@@ -28,3 +28,15 @@ button.addEventListener('click', function(){
         down.style.visibility = "hidden";
     }
 });
+let pa = document.getElementById("area");
+let first = document.getElementById("first");
+let second = document.getElementById("second");
+let box = document.getElementById("dropdown");
+first.addEventListener("click" , function(){
+    pa.innerHTML = "First";
+    dropdown.style.animation = "move 2s linear forwards"
+
+});
+second.addEventListener("click" , function(){
+    pa.innerHTML = "Second"
+})
