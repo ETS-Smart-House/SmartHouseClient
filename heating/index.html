@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="assets/logo.png">
-        <title>Pametna kuća</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>  
-        <div class="dropdown">
-            <button  onclick="myFunction()" class="dropbtn" id="dugme">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/logo.png">
+    <title>Pametna kuća</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn" id="dugme">
                 <p id="area">Select floor</p>
                 <div class="line"></div>
                 <img id="img1" src="assets/up-arrow.png" alt="Loading...">
                 <img id="img2" src="assets/down-arrow.png" alt="Loading...">
             </button>
-            <div id="myDropdown" class="dropdown-content">
-                <button id="first" >First</button>
-                <button id="second" >Second</button>
-            </div>
+        <div id="myDropdown" class="dropdown-content">
+            <button id="first">First</button>
+            <button id="second">Second</button>
         </div>
+    </div>
+    <div class="check-box">
+        <div class="manual">
+            <label><input type="checkbox" class="radio" value="1" />Manual</label>
+        </div>
+        <div class="automatic">
+            <label><input type="checkbox" class="radio" value="1" />Automatic</label>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
 
-        <script src="script.js"></script>
-    </body>
 </html>
