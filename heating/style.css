@@ -22,41 +22,32 @@ img {
 
 .line {
     width: 0;
-    height: calc(180px/3);
+    height: 60px;
     border-left: 1px solid #000;
     position: relative;
     left: 80%;
     transform: translate(-80%);
 }
 
+.dropbtn {
+    width: 600px;
+    height: calc(240px/3);
+}
+
 .dropdown {
-    position: relative;
-    top: 20px;
-    left: 50px;
-    transform: translateX(-30px);
+    margin: 10px;
     width: 600px;
     cursor: pointer;
 }
 
-.dropdown-content {
-    border-top: 1px solid black;
-    display: none;
-    position: absolute;
+.dropbtn {
+    position: relative;
     align-items: center;
     overflow: auto;
-    z-index: 1;
-}
-
-.dropdown .dropbtn {
     border-radius: 20px;
-}
-
-.dropdown-content button {
-    font-size: 15pt;
-    display: block;
-    width: 600px;
-    left: 80%;
-    height: calc(180px/3);
+    z-index: 1;
+    background-color: white;
+    font-size: 12pt;
 }
 
 .dropdown .dropbtn p {
@@ -74,39 +65,52 @@ img {
     transform: translate(-93%, -50%);
 }
 
-.dropdown .dropbtn img:nth-child(3) {
+.dropdown .dropbtn #up {
     visibility: hidden;
 }
 
-.dropbtn {
-    width: 600px;
-    height: calc(240px/3);
-}
-
-.show {
-    display: block;
-}
-
-.check-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    top: 25px;
-    left: 50px;
-    transform: translateX(-30px);
-    width: 600px;
-}
-
-.manual,
-.automatic {
-    margin: 10px;
-    width: 300px;
+.dropdown-menu {
+    padding-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 150px;
+    left: 0;
+    top: -20px;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    transform: translateY(-10%);
+    pointer-events: none;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
-label {
-    margin-left: 15px;
+.dropdown-menu button {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    width: 600px;
+    color: black;
+    font-size: 20pt;
+}
+
+.dropdown-menu button:nth-child(2) {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.dropdown>.dropbtn:focus+.dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dropdown-menu button:hover {
+    font-weight: bold;
 }

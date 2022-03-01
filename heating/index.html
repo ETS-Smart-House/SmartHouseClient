@@ -10,27 +10,19 @@
 </head>
 
 <body>
-    <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn" id="dugme">
-                <p id="area">Select floor</p>
+    <div class="dropdown" data-dropdown>
+        <button class="dropbtn" data-dropdown-button>
+                <p id="area">Odaberite sprat </p>
                 <div class="line"></div>
-                <img id="img1" src="assets/up-arrow.png" alt="Loading...">
-                <img id="img2" src="assets/down-arrow.png" alt="Loading...">
+                <img id="up" src="assets/up-arrow.png" alt="Loading...">
+                <img id="down" src="assets/down-arrow.png" alt="Loading...">
             </button>
-        <div id="myDropdown" class="dropdown-content">
-            <button id="first">First</button>
-            <button id="second">Second</button>
+        <div class="dropdown-menu">
+            <button data-dropdown-button>Prvi</button>
+            <button data-dropdown-button>Drugi</button>
         </div>
     </div>
-    <div class="check-box">
-        <div class="manual">
-            <label><input type="checkbox" class="radio" value="1" />Manual</label>
-        </div>
-        <div class="automatic">
-            <label><input type="checkbox" class="radio" value="1" />Automatic</label>
-        </div>
-    </div>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
