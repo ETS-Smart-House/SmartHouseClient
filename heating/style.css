@@ -114,3 +114,23 @@ img {
 .dropdown-menu button:hover {
     font-weight: bold;
 }
+
+.checkBox {
+    opacity: 1;
+    display: flex;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+
+.checkBox .group {
+    border: 1px solid red;
+    padding: 20px;
+    z-index: 1;
+    position: absolute;
+    margin: 50px;
+    top: -150px;
+    left: 100px;
+}
