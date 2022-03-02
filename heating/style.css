@@ -80,7 +80,7 @@ img {
     left: 0;
     top: -20px;
     background-color: white;
-    opacity: 0;
+    visibility: hidden;
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
     transform: translateY(-10%);
     pointer-events: none;
@@ -106,7 +106,7 @@ img {
 }
 
 .dropdown>.dropbtn:focus+.dropdown-menu {
-    opacity: 1;
+    visibility: visible;
     transform: translateY(0);
     pointer-events: auto;
 }

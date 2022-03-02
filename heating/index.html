@@ -18,8 +18,19 @@
                 <img id="down" src="assets/down-arrow.png" alt="Loading...">
             </button>
         <div class="dropdown-menu">
-            <button data-dropdown-button>Prvi</button>
-            <button data-dropdown-button>Drugi</button>
+            <button onmouseover="promena();" data-dropdown-button><p>Prvi</p></button>
+            <button onmouseover="promena1();" data-dropdown-button><p>Drugi</p></button>
+        </div>
+    </div>
+    <div class="checkBox">
+        <div class="group">
+            <input type="checkbox" id="automatic" />
+            <label for="automatic">Automatski</label>
+        </div>
+
+        <div class="group">
+            <input type="checkbox" id="manuel" />
+            <label for="manuel">Manuelno</label>
         </div>
     </div>
     <script src="script.js" defer></script>
