@@ -38,6 +38,7 @@ img {
     margin: 10px;
     width: 600px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .dropbtn {
@@ -77,8 +78,8 @@ img {
     flex-direction: column;
     position: relative;
     height: 150px;
-    left: 0;
-    top: -20px;
+    left: 0px;
+    top: -15px;
     background-color: white;
     visibility: hidden;
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
@@ -86,6 +87,7 @@ img {
     pointer-events: none;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+    z-index: 1;
 }
 
 .dropdown-menu button {
@@ -98,6 +100,7 @@ img {
     width: 600px;
     color: black;
     font-size: 20pt;
+    z-index: 1;
 }
 
 .dropdown-menu button:nth-child(2) {
@@ -109,6 +112,7 @@ img {
     visibility: visible;
     transform: translateY(0);
     pointer-events: auto;
+    z-index: 1;
 }
 
 .dropdown-menu button:hover {
@@ -116,21 +120,17 @@ img {
 }
 
 .checkBox {
+    z-index: 0;
     opacity: 1;
     display: flex;
     width: 600px;
     justify-content: center;
     align-items: center;
-    z-index: 1;
-    position: relative;
+    position: absolute;
+    top: 100px;
 }
 
 .checkBox .group {
-    border: 1px solid red;
     padding: 20px;
-    z-index: 1;
-    position: absolute;
-    margin: 50px;
-    top: -150px;
-    left: 100px;
+    z-index: 0;
 }

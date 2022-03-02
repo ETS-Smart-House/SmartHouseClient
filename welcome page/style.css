@@ -278,3 +278,23 @@ section .box1 .production p {
         transform: rotate(360deg);
     }
 }
+
+
+/* @media only screen and (max-width: 2000px) {
+    img {
+        max-width: 500px;
+        max-height: 500px;
+    }
+    p {
+        font-size: 16px;
+    }
+    section {
+        margin-top: -20px;
+    }
+    section .box1 {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: block;
+        flex-direction: column;
+    }
+} */

@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- dropdown -->
     <div class="dropdown" data-dropdown>
         <button class="dropbtn" data-dropdown-button>
                 <p id="area">Odaberite sprat </p>
@@ -22,17 +23,19 @@
             <button onmouseover="promena1();" data-dropdown-button><p>Drugi</p></button>
         </div>
     </div>
+    <!-- check -->
     <div class="checkBox" id="chB">
         <div class="group">
-            <input type="checkbox" id="automatic" />
+            <input type="radio" id="automatic" name="chose" />
             <label for="automatic">Automatski</label>
         </div>
 
         <div class="group">
-            <input type="checkbox" id="manuel" />
+            <input type="radio" id="manuel" name="chose" />
             <label for="manuel">Manuelno</label>
         </div>
     </div>
+
     <script src="script.js" defer></script>
 </body>
 
