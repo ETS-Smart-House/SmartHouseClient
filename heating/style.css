@@ -38,7 +38,6 @@ img {
     margin: 10px;
     width: 600px;
     cursor: pointer;
-    z-index: 1;
 }
 
 .dropbtn {
@@ -46,7 +45,7 @@ img {
     align-items: center;
     overflow: auto;
     border-radius: 20px;
-    z-index: 1;
+    z-index: 2;
     background-color: white;
     font-size: 12pt;
 }
@@ -71,6 +70,7 @@ img {
 }
 
 .dropdown-menu {
+    z-index: 1;
     padding-top: 10px;
     display: flex;
     justify-content: center;
@@ -78,8 +78,8 @@ img {
     flex-direction: column;
     position: relative;
     height: 150px;
-    left: 0px;
-    top: -15px;
+    left: 0;
+    top: -20px;
     background-color: white;
     visibility: hidden;
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
@@ -87,7 +87,6 @@ img {
     pointer-events: none;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    z-index: 1;
 }
 
 .dropdown-menu button {
@@ -100,7 +99,6 @@ img {
     width: 600px;
     color: black;
     font-size: 20pt;
-    z-index: 1;
 }
 
 .dropdown-menu button:nth-child(2) {
@@ -112,7 +110,6 @@ img {
     visibility: visible;
     transform: translateY(0);
     pointer-events: auto;
-    z-index: 1;
 }
 
 .dropdown-menu button:hover {
@@ -120,17 +117,55 @@ img {
 }
 
 .checkBox {
-    z-index: 0;
-    opacity: 1;
+    opacity: 0;
     display: flex;
     width: 600px;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 100px;
+    z-index: 0;
+    position: relative;
+    top: -150px;
 }
 
 .checkBox .group {
     padding: 20px;
     z-index: 0;
+    margin: 10px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    position: relative;
+}
+
+label::before {
+    content: "";
+    background: url("assets/check-circle.svg");
+    background-position: center;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: -44px;
+    top: 8px;
+    transform: scale(0) rotateZ(180deg);
+    transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+}
+
+input[type="radio"]:checked+label::before {
+    transform: scale(1) rotateZ(0deg);
+}
+
+label::after {
+    content: "";
+    border: 2px solid #27ae60;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: -42px;
+    top: 9px;
+    border-radius: 50%;
 }

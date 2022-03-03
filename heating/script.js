@@ -2,6 +2,9 @@ let up = document.getElementById("up");
 let down = document.getElementById("down");
 let area = document.getElementById("area");
 let checkBox = document.getElementById("chB");
+document.getElementById("btnmain").addEventListener("click", function() {
+    checkBox.style.opacity = "1"
+})
 
 function promena() {
     area.innerHTML = "Prvi";
