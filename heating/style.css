@@ -169,6 +169,7 @@ input[type="radio"] {
 
 label {
     position: relative;
+    font-size: 20pt;
 }
 
 label::before {
@@ -180,7 +181,7 @@ label::before {
     height: 32px;
     position: absolute;
     left: -44px;
-    top: 8px;
+    top: 5px;
     transform: scale(0) rotateZ(180deg);
     transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
 }
@@ -196,7 +197,7 @@ label::after {
     height: 24px;
     position: absolute;
     left: -42px;
-    top: 9px;
+    top: 6px;
     border-radius: 50%;
 }
 
