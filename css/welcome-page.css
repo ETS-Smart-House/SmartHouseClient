@@ -10,7 +10,7 @@ body {
     display: flex;
 }
 
-.temp-box {
+header .quick-temperature {
     margin: 10px;
     width: 300px;
     height: 50px;
@@ -21,34 +21,32 @@ body {
     border-radius: 20px;
 }
 
-.temp-box .box-chose:nth-child(1) {
-    border-right: 2px solid black;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.temp-box .box-chose:nth-child(2) {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.box-chose {
+header .quick-temperature .temperature-box {
     color: white;
     display: flex;
     align-items: center;
     height: 50px;
     width: 300px;
     padding: 15px;
-    text-align: center;
+    cursor: pointer;
 }
 
-#bxc1 {
+header .quick-temperature .indoor-temperature {
+    border-right: 2px solid black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+header .quick-temperature .outdoor-temperature {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+header .quick-temperature .value {
     background-color: white;
     color: transparent;
     height: 50px;
     width: 0px;
     position: absolute;
-    left: 150px;
     transition: 0.2s;
     display: flex;
     align-items: center;
@@ -56,52 +54,33 @@ body {
     font-weight: bold;
 }
 
-#-bxc1:hover #bxc1 {
+header .quick-temperature .indoor-temperature .value {
+    left: 150px
+}
+
+header .quick-temperature .outdoor-temperature .value {
+    left: 0
+}
+
+header .quick-temperature .label:hover ~ .value {
     color: black;
     background-color: white;
     height: 50px;
     width: 150px;
     position: absolute;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 20px 0 0 20px;
     transition: 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
 }
-
-#bxc2 {
-    background-color: white;
-    color: transparent;
-    height: 50px;
-    width: 0px;
-    left: 149px;
-    position: absolute;
-    transition: 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
+header .quick-temperature .indoor-temperature .label:hover ~ .value {
+    left: 150px;
+    border-radius: 0 20px 20px 0;
 }
 
-#-bxc2:hover #bxc2 {
-    height: 50px;
-    width: 151px;
-    left: 0px;
-    color: black;
-    background-color: white;
-    position: absolute;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    transition: 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-
-section {
+.content {
     color: white;
     display: flex;
     padding: 20px;
@@ -112,7 +91,7 @@ section {
     margin: 50px auto;
 }
 
-section .box1 {
+.content .about {
     display: flex;
     flex-direction: column;
     max-width: 960px;
@@ -120,32 +99,29 @@ section .box1 {
     margin: 50px auto;
 }
 
-section .description {
+.content .description {
     display: flex;
     flex-direction: column;
     font-size: 19pt;
     letter-spacing: 1px;
-}
-
-section .box .production p:nth-child(5) {
-    margin-top: 10px;
-}
-
-section .description p:nth-child(1) {
     text-align: center;
 }
 
-section .box1 ul {
+.content ul {
+    list-style: none;
+}
+
+.content ul.controls {
     display: flex;
 }
 
-section .box1 ul li {
+.content ul.controls li {
     display: flex;
     list-style: none;
     flex: 1;
 }
 
-section ul li a {
+.content ul.controls li a {
     padding: 50px 180px 50px 180px;
     background-color: #1a73e8;
     position: relative;
@@ -159,12 +135,12 @@ section ul li a {
     text-decoration: none;
 }
 
-section ul li a:hover {
+.content ul.controls li a:hover {
     background: var(--color);
     box-shadow: 0 0 10px var(--color), 0 0 30px var(--color), 0 0 60px var(--color);
 }
 
-section ul li a::before {
+.content ul.controls li a::before {
     content: "";
     position: absolute;
     width: 40px;
@@ -176,11 +152,11 @@ section ul li a::before {
     animation-delay: calc(0.33s * var(--i));
 }
 
-a:hover::before {
+.content ul.controls li a:hover::before {
     width: 120px;
 }
 
-a::after {
+.content ul.  li a::after {
     content: "";
     position: absolute;
     inset: 5px;
@@ -190,11 +166,11 @@ a::after {
     transition: 0.5s;
 }
 
-a:hover::after {
+.content ul.controls li a:hover::after {
     background: var(--color);
 }
 
-a span {
+.content ul.controls li a span {
     position: relative;
     z-index: 1;
     color: #fff;
@@ -203,59 +179,32 @@ a span {
     transition: 0.5s;
 }
 
-a span:hover {
+.content ul.controls li a span:hover {
     opacity: 1;
 }
 
-section .box1 .production p {
+.content ul.production  {
     text-align: left;
     font-size: 10pt;
     letter-spacing: 2px;
     color: #fff;
 }
 
-.imgHolder {
+.content ul.production li {
+    white-space: nowrap;
+    font-size: 15pt;
+    overflow: hidden;
+    margin: 5px
+}
+
+.logo {
     display: flex;
     align-items: center;
 }
 
-.imgHolder img {
+.logo img {
     width: 600px;
     height: 600px;
-}
-
-.typing1,
-.typing2,
-.typing3,
-.typing4 {
-    white-space: nowrap;
-    font-size: 10pt;
-    overflow: hidden;
-    visibility: hidden;
-    margin: 5px;
-}
-
-.typing1 {
-    width: 16ch;
-    animation: typing 0.5s steps(15) forwards;
-}
-
-.typing2 {
-    width: 54ch;
-    animation: typing 1s steps(54) forwards;
-    animation-delay: 0.5s;
-}
-
-.typing3 {
-    width: 11ch;
-    animation: typing 0.5s steps(11) forwards;
-    animation-delay: 1.5s;
-}
-
-.typing4 {
-    width: 29ch;
-    animation: typing 0.5s steps(29) forwards;
-    animation-delay: 2s;
 }
 
 @keyframes typing {
@@ -288,10 +237,10 @@ section .box1 .production p {
     p {
         font-size: 16px;
     }
-    section {
+    .content {
         margin-top: -20px;
     }
-    section .box1 {
+    .content .box1 {
         margin-top: 100px;
         margin-bottom: 100px;
         display: block;

@@ -19,10 +19,10 @@ for (let i = 0; i < radioList.length; i++) {
             alert(i)
         } else if (i == 2) {
             alert(i)
-                //omogucava interval dana
+            //omogucava interval dana
         } else if (i == 3) {
             alert(i)
-                //omogucava interval dana
+            //omogucava interval dana
         }
     })
 }

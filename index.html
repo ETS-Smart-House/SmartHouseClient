@@ -4,16 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/logo.png">
+    <link rel="icon" href="/assets/logo.png">
     <title>Pametna kuća</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/welcome-page.css">
+
 </head>
 
-<body onload="setTimeout(redirect, 3000)">
-    <div>
-        <img id="logo" src="assets/logo.png" alt="Loading...">
+<body>
+<header>
+    <div class="quick-temperature">
+        <div class="temperature-box indoor-temperature">
+            <p class="label">Unutrasnja</p>
+            <div class="value">
+                unutrasnja
+            </div>
+        </div>
+
+        <div class="temperature-box outdoor-temperature">
+            <p class="label">Spoljasnja</p>
+            <div class="value">
+                spoljasnja
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
+</header>
+    <section class="content">
+        <div class="about">
+            <div class="description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat lorem et libero volutpat cursus. Sed semper scelerisque purus, vel vulputate orci sodales id. Integer vehicula et nunc quis dapibus. Nunc nec sapien eget eros iaculis
+                    maximus porttitor ac metus.
+                </p>
+            </div>
+            <ul class="controls">
+                <li><a href="main-page/index.html" style="--color: #00bae9; --i:0;"><span>Start</span></a></li>
+                <li><a href="#Stats" style="--color: #00bae9; --i:1;"><span>Stats</span></a></li>
+            </ul>
+            <ul class="production">
+                <li><b>Produkcija:</b> <ul>
+                    <li>Luka Đorđević</li>
+                    <li>Stefan Đilas</li>
+                    <li>Rastko Dragić</li>
+
+                </ul> </li>
+                <li><b>Mentor:</b></li>
+                <li>Prof. Nebojša Bogićević</li>
+            </ul>
+        </div>
+
+        <section class="logo">
+            <img src="./assets/welcome-page/baner1.png" alt="loading...">
+        </section>
+
+    </section>
 </body>
 
 </html>
