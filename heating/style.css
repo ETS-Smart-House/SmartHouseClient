@@ -8,11 +8,10 @@
     --light-main: #fdfdfd;
     --light-second: #c3c2c8;
     --light-hover: #edf0f5;
-    --light-text: #151426;
+    --light-text: #fff;
     --blue: #0000ff;
     --white: #fff;
     --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    --font-family: cursive;
 }
 
 .dark {
@@ -218,6 +217,7 @@ label::after {
     font-size: 1em;
     box-shadow: var(--shadow);
     opacity: 0;
+    color: white;
 }
 
 .calendar-header {
@@ -226,12 +226,13 @@ label::after {
     align-items: center;
     font-size: 25px;
     font-weight: 600;
-    color: var(--color-txt);
+    color: white;
     padding: 10px;
 }
 
 .calendar-body {
     padding: 10px;
+    color: white;
 }
 
 .calendar-week-day {
