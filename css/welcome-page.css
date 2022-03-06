@@ -1,15 +1,19 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+ }
 body {
     background-color: #145bb8;
     display: flex;
+    flex-direction: column;
+    color: white;
 }
-
+img{
+    width:600px;
+    height: 600px;
+}
 header .quick-temperature {
     margin: 10px;
     width: 300px;
@@ -20,17 +24,16 @@ header .quick-temperature {
     background-color: #0d3d7a;
     border-radius: 20px;
 }
-
 header .quick-temperature .temperature-box {
     color: white;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 50px;
     width: 300px;
     padding: 15px;
     cursor: pointer;
 }
-
 header .quick-temperature .indoor-temperature {
     border-right: 2px solid black;
     border-top-left-radius: 20px;
@@ -40,7 +43,6 @@ header .quick-temperature .outdoor-temperature {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-
 header .quick-temperature .value {
     background-color: white;
     color: transparent;
@@ -53,15 +55,12 @@ header .quick-temperature .value {
     justify-content: center;
     font-weight: bold;
 }
-
 header .quick-temperature .indoor-temperature .value {
     left: 150px
 }
-
 header .quick-temperature .outdoor-temperature .value {
     left: 0
 }
-
 header .quick-temperature .label:hover ~ .value {
     color: black;
     background-color: white;
@@ -79,171 +78,279 @@ header .quick-temperature .indoor-temperature .label:hover ~ .value {
     left: 150px;
     border-radius: 0 20px 20px 0;
 }
-
-.content {
-    color: white;
+.content{
+    margin: 0 auto;
+    margin-top: 50px;
     display: flex;
-    padding: 20px;
-    max-width: 1700px;
-    height: 800px;
-    background-color: transparent;
-    border-radius: 20px;
-    margin: 50px auto;
-}
-
-.content .about {
-    display: flex;
-    flex-direction: column;
-    max-width: 960px;
-    justify-content: space-around;
-    margin: 50px auto;
-}
-
-.content .description {
-    display: flex;
-    flex-direction: column;
-    font-size: 19pt;
-    letter-spacing: 1px;
-    text-align: center;
-}
-
-.content ul {
-    list-style: none;
-}
-
-.content ul.controls {
-    display: flex;
-}
-
-.content ul.controls li {
-    display: flex;
-    list-style: none;
-    flex: 1;
-}
-
-.content ul.controls li a {
-    padding: 50px 180px 50px 180px;
-    background-color: #1a73e8;
-    position: relative;
     justify-content: center;
     align-items: center;
-    font-size: 20pt;
-    letter-spacing: 5px;
-    border-radius: 70px;
-    transition: 1s;
-    overflow: hidden;
-    text-decoration: none;
-}
-
-.content ul.controls li a:hover {
-    background: var(--color);
-    box-shadow: 0 0 10px var(--color), 0 0 30px var(--color), 0 0 60px var(--color);
-}
-
-.content ul.controls li a::before {
-    content: "";
-    position: absolute;
-    width: 40px;
-    top: -180px;
-    height: 500px;
-    background: var(--color);
-    transition: 1s;
-    animation: animate 2s linear infinite;
-    animation-delay: calc(0.33s * var(--i));
-}
-
-.content ul.controls li a:hover::before {
-    width: 120px;
-}
-
-.content ul.  li a::after {
-    content: "";
-    position: absolute;
-    inset: 5px;
-    color: #fff;
-    background: #0d3d7a;
-    border-radius: 70px;
-    transition: 0.5s;
-}
-
-.content ul.controls li a:hover::after {
-    background: var(--color);
-}
-
-.content ul.controls li a span {
     position: relative;
-    z-index: 1;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    transition: 0.5s;
-}
-
-.content ul.controls li a span:hover {
-    opacity: 1;
-}
-
-.content ul.production  {
-    text-align: left;
-    font-size: 10pt;
-    letter-spacing: 2px;
-    color: #fff;
-}
-
-.content ul.production li {
-    white-space: nowrap;
-    font-size: 15pt;
-    overflow: hidden;
-    margin: 5px
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 600px;
+    max-width: 1900px;
+    padding: 20px;
     height: 600px;
 }
+.content .about{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
+    max-width: 900px;
+}
+.content .about .description{
+    position: relative;
+    text-align: center;
+    letter-spacing: 2px;
+    max-width: 800px;
+    padding: 10px;
+    font-size: 18pt;
+    margin-bottom: 100px;
+}
+.content .about .controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.content .about .controls li{
+    background-color: #145bb8;
+}
+.content .about .controls li .dropdown{
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    position: relative;
+}
+.content .about .controls li .stats{
+    color: white;
+    text-decoration: none;
+    padding: 40px 120px;
+    border: 1px solid white;
+    border-radius: 50px;
 
-@keyframes typing {
-    0% {
-        width: 0;
-        visibility: hidden;
-        border-right: 3px solid white;
-    }
-    100% {
-        visibility: visible;
-        border-right: none;
-    }
+}
+.content .about .controls li .dropdown button{
+    padding: 40px 120px;
+    border: 1px solid white;
+}
+.content .about .controls li .dropdown button,
+.content .about .controls li:nth-child(2)
+{
+    border-radius: 50px;
+    font-size: 18pt;
+    background-color: #145bb8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.content .about .controls li .dropdown-content{
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+    transition: 0.2s;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: 1px solid white;
+    text-align: center;
+}
+.content .about .controls li .dropdown:hover .dropdown-content {
+    display: block;
+}
+.content .about .controls li .dropdown:hover button{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: #FFFFFF;
+    background-color: #00A4BD;
+}
+.content .about .controls li .dropdown-content a {
+    padding: 30px 90px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+.content .about .controls li .dropdown-content a:hover,
+.content .about .controls li:nth-child(2):hover{
+    transition: 0.2s;
+    color: #FFFFFF;
+    background-color: #00A4BD;
+}
+.logo{
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:600px;
+    height: 600px;
+}
+footer{
+    display: flex;
+    max-width: 500px;
+    padding: 20px;
+    position: absolute;
+    top: 100vh;
+    transform: translateY(-100%);
+}
+footer ul{
+    list-style: none;
+    margin: 20px;
+}
+footer ul li{
+    margin: 2px;
 }
 
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-    }
-    0% {
-        transform: rotate(360deg);
-    }
-}
 
-
-/* @media only screen and (max-width: 2000px) {
-    img {
-        max-width: 500px;
-        max-height: 500px;
+@media only screen and (max-width: 1900px) {
+    img{
+        width: 500px;
+        height: 500px;
     }
-    p {
-        font-size: 16px;
-    }
-    .content {
-        margin-top: -20px;
-    }
-    .content .box1 {
+    .content{
         margin-top: 100px;
-        margin-bottom: 100px;
-        display: block;
-        flex-direction: column;
     }
-} */
+    .content .about{
+        height: 400px;
+        max-width: 900px;
+    }
+    .content .about .description{
+        position: relative;
+        text-align: center;
+        letter-spacing: 2px;
+        max-width: 800px;
+        padding: 10px;
+        font-size: 15pt;
+    }
+    footer{
+        max-width: 500px;
+        padding: 20px;
+        position: absolute;
+        top: 100vh;
+        transform: translateY(-100%);
+    }
+    footer ul{
+        list-style: none;
+        margin:5px;
+        font-size: 12pt;
+    }
+    footer ul li{
+        margin: 3px;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+        width: 500px;
+        height: 500px;
+    }
+
+}
+@media only screen and (max-width: 1600px) {
+    img{
+        width: 400px;
+        height: 400px;
+    }
+    .logo{
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+    }
+    .content{
+        margin-top: 50px;
+        padding: 100px;
+    }
+    .content .about{
+        height: 300px;
+        max-width: 900px;
+    }
+    .content .about .description{
+        position: relative;
+        text-align: center;
+        letter-spacing: 2px;
+        max-width: 800px;
+        padding: 10px;
+        font-size: 15pt;
+    }
+    .content .about .controls li .stats{
+        padding: 20px 120px;
+    }
+    .content .about .controls li .dropdown button{
+        padding: 20px 120px;
+    }
+    .content .about .controls li .dropdown-content a {
+        padding: 20px 90px;
+    }
+    footer{
+        padding: 0px;
+        position: absolute;
+        top: 100vh;
+        transform: translateY(-100%);
+    }
+    footer ul {
+        margin: 10px;
+        font-size: 10pt;
+
+    }
+}
+@media only screen and (max-width: 1300px) {
+    img{
+        width: 300px;
+        height: 300px;
+    }
+    .logo{
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+    }
+    .content{
+        margin-top: -50px;
+        padding: 100px;
+    }
+    .content .about{
+        height: 300px;
+        max-width: 900px;
+    }
+    .content .about .description{
+        max-width: 800px;
+        padding: 5px;
+        font-size: 12pt;
+        margin-bottom: 50px;
+    }
+    .content .about .controls li .stats{
+        padding: 20px 100px;
+    }
+    .content .about .controls li .dropdown button{
+        padding: 20px 100px;
+    }
+    .content .about .controls li .dropdown-content a {
+        padding: 20px 90px;
+    }
+    footer{
+        padding: 10px;
+        position: absolute;
+        top: 100vh;
+        transform: translateY(-100%);
+    }
+    footer ul {
+        margin: 5px;
+        font-size: 9pt;
+
+    }
+    .content .about .controls li .dropdown-content a {
+        padding: 20px 90px;
+    }
+    header{
+        z-index: 1;
+    }
+}

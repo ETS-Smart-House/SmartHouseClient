@@ -6,56 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/logo.png">
     <title>Pametna kuća</title>
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/welcome-page.css">
-
 </head>
 
 <body>
-<header>
-    <div class="quick-temperature">
-        <div class="temperature-box indoor-temperature">
-            <p class="label">Unutrasnja</p>
-            <div class="value">
-                unutrasnja
+    <header>
+        <div class="quick-temperature">
+            <div class="temperature-box indoor-temperature">
+                <p class="label">Unutrasnja</p>
+                <div class="value value1">
+                    unutrasnja
+                </div>
             </div>
-        </div>
 
-        <div class="temperature-box outdoor-temperature">
-            <p class="label">Spoljasnja</p>
-            <div class="value">
-                spoljasnja
+            <div class="temperature-box outdoor-temperature">
+                <p class="label">Spoljasnja</p>
+                <div class="value value2">
+                    spoljasnja
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
     <section class="content">
         <div class="about">
             <div class="description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat lorem et libero volutpat cursus. Sed semper scelerisque purus, vel vulputate orci sodales id. Integer vehicula et nunc quis dapibus. Nunc nec sapien eget eros iaculis
-                    maximus porttitor ac metus.
+                <p>Pametna kuća je model kuće sa modernim sistemima automatizacije, obnovljivim napajanjem
+                    i centralnim podno-zidnim grejanjem. Sistem automatizacije je realizovan preko "raspberry
+                    pi" mikro-računara i kontroliše se pomocu web-aplikacije.
                 </p>
             </div>
             <ul class="controls">
-                <li><a href="main-page/index.html" style="--color: #00bae9; --i:0;"><span>Start</span></a></li>
-                <li><a href="#Stats" style="--color: #00bae9; --i:1;"><span>Stats</span></a></li>
-            </ul>
-            <ul class="production">
-                <li><b>Produkcija:</b> <ul>
-                    <li>Luka Đorđević</li>
-                    <li>Stefan Đilas</li>
-                    <li>Rastko Dragić</li>
-
-                </ul> </li>
-                <li><b>Mentor:</b></li>
-                <li>Prof. Nebojša Bogićević</li>
+                <li>
+                    <div class="dropdown">
+                        <button>Podesavanje</button>
+                        <div class="dropdown-content">
+                            <a href="./heating/index.html">Grejanje</a>
+                            <a href="#">Rasveta</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="stats" href="./stats/index.html">Statistika</a></li>
             </ul>
         </div>
-
         <section class="logo">
             <img src="./assets/welcome-page/baner1.png" alt="loading...">
         </section>
 
     </section>
-</body>
+<footer>
+    <ul class="production">
+        <li><b>Produkcija:</b>
+            <ul>
+                <li>Luka Đorđević</li>
+                <li>Stefan Đilas</li>
+                <li>Rastko Dragić</li>
 
+            </ul>
+        </li>
+        <li><b>Mentor:</b></li>
+        <li>Prof. Nebojša Bogićević</li>
+    </ul>
+</footer>
+    <script src="./js/welcome-page.js"></script>
+</body>
 </html>
