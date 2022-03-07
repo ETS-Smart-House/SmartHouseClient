@@ -157,6 +157,7 @@ header .quick-temperature .indoor-temperature .label:hover ~ .value {
     border-bottom-left-radius: 50px;
     border: 1px solid white;
     text-align: center;
+
 }
 .content .about .controls li .dropdown:hover .dropdown-content {
     display: block;
@@ -171,6 +172,7 @@ header .quick-temperature .indoor-temperature .label:hover ~ .value {
     padding: 30px 90px;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: #fff;
     text-decoration: none;
 }
