@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #145bb8;
+    height: 100vh;
+}
+
+label {
+    position: relative;
+    width: 150px;
+    height: 75px;
+    background-color: #212121;
+    border-radius: 10px;
+}
+
+label input {
+    appearance: none;
+}
+
+label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 63px;
+    height: 63px;
+    background-color: #333;
+    border: 6px solid #212121;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+label input:checked~span {
+    transition: 0.2s ease-in-out;
+    left: 75px;
+}
+
+.on {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.off {
+    display: none;
+}
+
+label input:checked~.off {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
