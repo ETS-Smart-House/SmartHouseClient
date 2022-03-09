@@ -28,28 +28,29 @@ label span {
     border: 6px solid #212121;
     border-radius: 14px;
     cursor: pointer;
-    transition: 0.2s ease-in-out;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 label input:checked~span {
-    transition: 0.2s ease-in-out;
+    transition: 0.5s ease-in-out;
     left: 75px;
 }
 
-.on {
-    display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+span::after {
+    content: 'On';
+    font-weight: bold;
+    color: white;
+    filter: drop-shadow(0 0 5px white);
+    transition: 0.5s ease-in-out;
 }
 
-.off {
-    display: none;
-}
-
-label input:checked~.off {
-    display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+label input:checked~span::after {
+    content: "Off";
+    color: black;
+    font-weight: bold;
+    filter: drop-shadow(0 0 5px black);
+    transition: 0.5s ease-in-out;
 }
