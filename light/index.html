@@ -12,9 +12,17 @@
 
 <body>
     <label>
-        <input type="checkbox">
+        <input type="checkbox" id="chb">
         <span></span>
-        </label>
+        <div class="bulp" id="img"></div>
+    </label>
+    <div class="slider-holder">
+        <input oninput="slider()" type="range" value="0" class="slider" id="myRange">
+        <div class="tooltip">
+            <p id="area"></p>
+        </div>
+    </div>
+    <script src="/js/light.js"></script>
 </body>
 
 </html>
