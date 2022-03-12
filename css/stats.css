@@ -12,7 +12,7 @@
 }
 
 .trenutno {
-    background-color: #145bb8;
+    background-color: #006eff;
     color: white;
     border-right: 2px solid black;
     padding: 15px;
@@ -24,6 +24,20 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.trenutno nav {
+    width: 200px;
+}
+
+.trenutno nav div {
+    width: 200px;
+    padding: 10px;
+}
+
+.trenutno nav div button {
+    width: 200px;
+    padding: 10px 0;
 }
 
 .trenutno .box .v-line {
@@ -73,8 +87,6 @@
     left: 100%;
     transform: translate(-100%);
     background-color: white;
-
-
 }
 
 .istorija .h-box {
@@ -332,4 +344,12 @@
         border-bottom: 3px solid black;
         margin: 30px;
     }
+}
+
+.outdoor {
+    opacity: 0;
+}
+
+.outdoor:target {
+    opacity: 1;
 }

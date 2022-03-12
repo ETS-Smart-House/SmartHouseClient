@@ -11,17 +11,82 @@
 </head>
 
 <body>
-    <label>
-        <input type="checkbox" id="chb">
-        <span></span>
-        <div class="bulp" id="img"></div>
-    </label>
-    <div class="slider-holder">
-        <input oninput="slider()" type="range" value="0" class="slider" id="myRange">
-        <div class="tooltip">
-            <p id="area"></p>
+    <section>
+        <nav>
+            <a href="#Dnevna-soba">Dnevna soba </a>
+            <a href="#Kupatilo">Kupatilo </a>
+            <a href="#Stepeniste">Stepeniste </a>
+            <a href="#Soba1">Soba 1 </a>
+            <a href="#Soba2">Soba 2 </a>
+        </nav>
+
+        <div class="holder" id="Dnevna-soba">
+            <label>
+            <input type="checkbox" id="chbDs">
+            <span></span>
+            <div class="bulp"></div>
+        </label>
+            <div class="slider-holder">
+                <input oninput="slider()" type="range" value="0" class="slider" id="rangeDs">
+                <div class="tooltip">
+                    <p id="areaDs"></p>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <div class="holder" id="Kupatilo">
+            <label>
+                <input type="checkbox" id="chbKp">
+                <span></span>
+                <div class="bulp"></div>
+            </label>
+            <div class="slider-holder">
+                <input oninput="slider()" type="range" value="0" class="slider" id="rangeKp">
+                <div class="tooltip">
+                    <p id="areaKp"></p>
+                </div>
+            </div>
+        </div>
+        <div class="holder" id="Stepeniste">
+            <label>
+                <input type="checkbox" id="chbSt">
+                <span></span>
+                <div class="bulp"></div>
+            </label>
+            <div class="slider-holder">
+                <input oninput="slider()" type="range" value="0" class="slider" id="rangeSt">
+                <div class="tooltip">
+                    <p id="areaSt"></p>
+                </div>
+            </div>
+        </div>
+        <div class="holder" id="Soba1">
+            <label>
+            <input type="checkbox" id="chbS1">
+            <span></span>
+            <div class="bulp"></div>
+        </label>
+            <div class="slider-holder">
+                <input oninput="slider()" type="range" value="0" class="slider" id="rangeS1">
+                <div class="tooltip">
+                    <p id="areaS1"></p>
+                </div>
+            </div>
+        </div>
+        <div class="holder" id="Soba2">
+            <label>
+                <input type="checkbox" id="chbS2">
+                <span></span>
+                <div class="bulp"></div>
+            </label>
+            <div class="slider-holder">
+                <input oninput="slider()" type="range" value="0" class="slider" id="rangeS2">
+                <div class="tooltip">
+                    <p id="areaS2"></p>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="/js/light.js"></script>
 </body>
 
