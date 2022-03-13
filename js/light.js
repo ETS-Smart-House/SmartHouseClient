@@ -2,12 +2,24 @@
 var sliders = document.getElementsByClassName("slider");
 var outputs = document.getElementsByClassName("output");
 var checkbox = document.getElementsByClassName("checkbox");
-let buttons = document.getElementsByName("btn");
+let buttons = document.querySelectorAll("button");
+let holders = document.querySelectorAll(".holder");
 
 buttons.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        console.log(btn.value)
+    btn.addEventListener('click', function(e) {
 
+        // Proveri da li postoji active holder, ako postoji, skloni ga
+        let activeHolder = document.querySelector('.holder.active')
+        if(activeHolder) {
+            activeHolder.classList.remove('active')
+        }
+
+        // Nadji sobu
+        const room = e.target.dataset.room;
+
+        // Daj joj klasu 'active' kako bi postala display: block
+        activeHolder = document.querySelector(`.holder#${room}`)
+        activeHolder.classList.add('active')
     })
 });
 
