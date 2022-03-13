@@ -13,76 +13,76 @@
 <body>
     <section>
         <nav>
-            <a href="#Dnevna-soba">Dnevna soba </a>
-            <a href="#Kupatilo">Kupatilo </a>
-            <a href="#Stepeniste">Stepeniste </a>
-            <a href="#Soba1">Soba 1 </a>
-            <a href="#Soba2">Soba 2 </a>
+            <button value="1">Dnevna soba</button>
+            <button value="2">Kupatilo</button>
+            <button value="3">Stepenište</button>
+            <button value="4">Soba 1</button>
+            <button value="5">Soba 2</button>
         </nav>
 
-        <div class="holder" id="Dnevna-soba">
+        <div class="holder" id="living-room">
             <label>
-            <input type="checkbox" id="chbDs">
+            <input type="checkbox" class="checkbox">
             <span></span>
             <div class="bulp"></div>
         </label>
             <div class="slider-holder">
-                <input oninput="slider()" type="range" value="0" class="slider" id="rangeDs">
+                <input oninput="slider()" type="range" value="0" class="slider" id="range-living-room">
                 <div class="tooltip">
-                    <p id="areaDs"></p>
+                    <p class="output"></p>
                 </div>
             </div>
         </div>
 
-        <div class="holder" id="Kupatilo">
-            <label>
-                <input type="checkbox" id="chbKp">
+        <div class="holder" id="bathroom">
+            <label> 
+                <input type="checkbox" class="checkbox">
                 <span></span>
                 <div class="bulp"></div>
             </label>
             <div class="slider-holder">
-                <input oninput="slider()" type="range" value="0" class="slider" id="rangeKp">
+                <input oninput="slider()" type="range" value="0" class="slider" id="range-bathroom">
                 <div class="tooltip">
-                    <p id="areaKp"></p>
+                    <p class="output"></p>
                 </div>
             </div>
         </div>
-        <div class="holder" id="Stepeniste">
+        <div class="holder" id="stairs">
             <label>
-                <input type="checkbox" id="chbSt">
+                <input type="checkbox" class="checkbox">
                 <span></span>
                 <div class="bulp"></div>
             </label>
             <div class="slider-holder">
-                <input oninput="slider()" type="range" value="0" class="slider" id="rangeSt">
+                <input oninput="slider()" type="range" value="0" class="slider" id="range-stairs">
                 <div class="tooltip">
-                    <p id="areaSt"></p>
+                    <p class="output"></p>
                 </div>
             </div>
         </div>
-        <div class="holder" id="Soba1">
+        <div class="holder" id="room1">
             <label>
-            <input type="checkbox" id="chbS1">
+            <input type="checkbox" class="checkbox">
             <span></span>
             <div class="bulp"></div>
         </label>
             <div class="slider-holder">
                 <input oninput="slider()" type="range" value="0" class="slider" id="rangeS1">
                 <div class="tooltip">
-                    <p id="areaS1"></p>
+                    <p class="output"></p>
                 </div>
             </div>
         </div>
-        <div class="holder" id="Soba2">
+        <div class="holder" id="room2">
             <label>
-                <input type="checkbox" id="chbS2">
+                <input type="checkbox" class="checkbox">
                 <span></span>
                 <div class="bulp"></div>
             </label>
             <div class="slider-holder">
                 <input oninput="slider()" type="range" value="0" class="slider" id="rangeS2">
                 <div class="tooltip">
-                    <p id="areaS2"></p>
+                    <p class="output"></p>
                 </div>
             </div>
         </div>
