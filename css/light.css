@@ -51,6 +51,10 @@ nav button:hover {
     transition: 0.2s;
 }
 
+nav button.active {
+    color: red
+}
+
 
 /* control */
 
@@ -63,7 +67,8 @@ nav button:hover {
     display: none;
 }
 
-.holder.active {
+.holder.active,
+.slider.active {
     display: block
 }
 
@@ -131,7 +136,7 @@ nav button:hover {
     height: 500px;
     pointer-events: none;
     filter: drop-shadow(0px 0px 25px black);
-    /*background: url(/assets/light/bulp-off.svg);*/
+    background: url(/assets/light/bulp-off.svg);
     background-position: center;
     transition: 0.5s;
 }

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,84 +6,54 @@
     <link rel="icon" href="/assets/logo.png">
     <title>Pametna kuća</title>
     <link rel="stylesheet" href="../css/heating.css">
-    <link rel="stylesheet" href="./css/css-reset.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/sr-latn.js"></script>
 
 </head>
 
-<body class="dark">
-    <h1>menja se !!!</h1>
-    <!-- dropdown -->
-    <div class="dropdown" data-dropdown>
-        <button class="dropbtn" id="btnmain" data-dropdown-button>
-                <p id="area">Odaberite sprat </p>
-                <div class="line"></div>
-                <img id="up" src="../assets/heating/up-arrow.png" alt="Loading...">
-                <img id="down" src="../assets/heating/down-arrow.png" alt="Loading...">
-            </button>
-        <div class="dropdown-menu">
-            <button onmouseover="promena();" data-dropdown-button><p>Prvi</p></button>
-            <button onmouseover="promena1();" data-dropdown-button><p>Drugi</p></button>
-        </div>
-    </div>
-    <!-- check -->
+<body>
 
-    <div class="checkBox" id="chB">
-        <div class="row">
-            <div class="card check-card">
-                <input type="radio" id="automatic" name="choise1" class="check-card radio" checked />
-                <label for="automatic">Automatski</label>
-            </div>
+    <section class="sidebar">
+        <form id="heating-form">
+            <select name="floors" id="floors">
+               <option value="first">Prvi sprat</option>
+                <option value="second">Drugi sprat</option>
+            </select>
+
+            <fieldset class="mode-selector">
+                <input type="radio" id="auto" name="mode" value="auto" checked>
+                <label for="auto">Auto</label>
+
+                <input type="radio" id="manual" name="mode" value="manual">
+                <label for="manual">Manual</label>
+            </fieldset>
+            <!-- <input type="text" name="calendar"> -->
+            <div class="calendar hidden"></div>
+        </form>
+    </section>
+    <section class="content auto">
+        Temperatura je <input type="number" name="auto-temp" id="auto-temp" value="22">
+    </section>
+
+    <section class="content manual hidden">
+        <section class="values">
+            <fieldset>
+                <input type="time" name="from" id="from">
+                <input type="time" name="to" id="to">
+                <input type="number" name="temp" id="temp" value="22">
+            </fieldset>
+        </section>
+
+        <button id="add-another">Add another</button>
+    </section>
 
 
-            <div class="card check-card">
-                <input type="radio" id="manuel" name="choise1" class="check-card radio" />
-                <label for="manuel">Manuelno</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="card check-card">
-                <input type="radio" id="interval" name="choise2" class="check-card radio" />
-                <label for="interval">Interval dana</label>
-            </div>
 
 
-            <div class="card check-card">
-                <input type="radio" id="Jedan" name="choise2" class="check-card radio" checked />
-                <label for="Jedan">Jedan dan</label>
-            </div>
-        </div>
-    </div>
-    <!-- calendar -->
-    <div class="calendar" id="calendar">
-        <div class="calendar-header">
-            <span class="month-picker" id="month-picker">Februar</span>
-            <div class="year-picker">
-                <span class="year-change" id="prev-year">
-                    <pre><</pre>
-                </span>
-                <span id="year">2021</span>
-                <span class="year-change" id="next-year">
-                    <pre>></pre>
-                </span>
-            </div>
-        </div>
-        <div class="calendar-body">
-            <div class="calendar-week-day">
-                <div>Pon</div>
-                <div>Ut</div>
-                <div>Sr</div>
-                <div>Čet</div>
-                <div>Pet</div>
-                <div>Sub</div>
-                <div>Ned</div>
-            </div>
-            <div class="calendar-days"></div>
-        </div>
-        <div class="month-list"></div>
-    </div>
-
-    <script src="../js/heating.js" defer></script>
+    <script src="/js/heating.js" defer></script>
 </body>
 
 </html>

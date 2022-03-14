@@ -1,0 +1,19 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/sr-latn.js"></script>
+</head>
+<body>
+<input type="text" name="calendar">
+<script>
+    const elem = document.querySelector('input[name="calendar"]');
+    const datepicker = new Datepicker(elem, {
+        todayBtn: true,
+        language: 'sr-latn',
+        autohide: false
+    });
+</script>
+</body>
+</html>
