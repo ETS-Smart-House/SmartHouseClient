@@ -219,7 +219,7 @@ footer {
     max-width: 500px;
     padding: 20px;
     position: absolute;
-    top: 100vh;
+    top: 100%;
     transform: translateY(-100%);
 }
 
@@ -237,11 +237,7 @@ footer ul li {
         width: 500px;
         height: 500px;
     }
-    .content {
-        margin-top: 100px;
-    }
     .content .about {
-        height: 400px;
         max-width: 900px;
     }
     .content .about .description {
@@ -256,7 +252,7 @@ footer ul li {
         max-width: 500px;
         padding: 20px;
         position: absolute;
-        top: 100vh;
+        top: 100%;
         transform: translateY(-100%);
     }
     footer ul {
@@ -290,8 +286,9 @@ footer ul li {
         align-items: center;
         margin-left: 50px;
     }
-    .content {
-        margin-top: 50px;
+    section.content {
+        position: relative;
+        top: 0;
         padding: 100px;
     }
     .content .about {
@@ -307,27 +304,28 @@ footer ul li {
         font-size: 15pt;
     }
     .content .about .controls li .stats {
-        padding: 20px 120px;
+        padding: 30px 120px;
     }
     .content .about .controls li .dropdown button {
-        padding: 20px 120px;
+        padding: 30px 120px;
     }
     .content .about .controls li .dropdown-content a {
-        padding: 20px 90px;
+        padding: 30px 90px;
     }
     footer {
-        padding: 0px;
-        position: absolute;
-        top: 100vh;
-        transform: translateY(-100%);
+        margin: 0;
+        margin-top: -50px;
+        padding: 10px;
     }
     footer ul {
-        margin: 10px;
         font-size: 10pt;
     }
 }
 
 @media only screen and (max-width: 1300px) {
+    body {
+        height: 30vh;
+    }
     img {
         width: 300px;
         height: 300px;
@@ -341,11 +339,9 @@ footer ul li {
         margin-left: 50px;
     }
     .content {
-        margin-top: -50px;
-        padding: 100px;
+        margin: 0;
     }
     .content .about {
-        height: 300px;
         max-width: 900px;
     }
     .content .about .description {
@@ -355,18 +351,18 @@ footer ul li {
         margin-bottom: 50px;
     }
     .content .about .controls li .stats {
-        padding: 20px 100px;
+        padding: 30px 100px;
     }
     .content .about .controls li .dropdown button {
-        padding: 20px 100px;
+        padding: 30px 100px;
     }
     .content .about .controls li .dropdown-content a {
-        padding: 20px 90px;
+        padding: 30px 90px;
     }
     footer {
         padding: 10px;
         position: absolute;
-        top: 100vh;
+        bottom: 0%;
         transform: translateY(-100%);
     }
     footer ul {
@@ -378,5 +374,27 @@ footer ul li {
     }
     header {
         z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .content {
+        top: 150px;
+    }
+    .content .about .controls {
+        width: 700px;
+    }
+    .content .about .controls li .stats {
+        padding: 15px 80px;
+    }
+    .content .about .controls li .dropdown button {
+        padding: 15px 80px;
+    }
+    .content .about .controls li .dropdown-content a {
+        padding: 10px 70px;
+    }
+    footer {
+        position: absolute;
+        bottom: -15px;
     }
 }

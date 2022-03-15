@@ -6,6 +6,11 @@ const contentAutoContainer = document.querySelector('section.content.auto')
 const contentManualContainer = document.querySelector('section.content.manual')
 const addAnotherBtn = document.querySelector('#add-another')
 
+addEventListener("DOMContentLoaded", () => {
+    // API poziv za temperaturu
+    console.log('loadewd')
+})
+
 const datePicker = new Datepicker(calendarContainer, {
     todayBtn: true,
     language: 'sr-latn',

@@ -13,11 +13,11 @@
 <body>
     <section>
         <nav>
-            <button value="1" data-room="living-room">Dnevna soba</button>
-            <button value="2" data-room="bathroom">Kupatilo</button>
-            <button value="3" data-room="stairs">Stepenište</button>
-            <button value="4" data-room="room1">Soba 1</button>
-            <button value="5" data-room="room2">Soba 2</button>
+            <button id="living-room">Dnevna soba</button>
+            <button id="bathroom">Kupatilo</button>
+            <button id="stairs">Stepenište</button>
+            <button id="room1">Soba 1</button>
+            <button id="room2">Soba 2</button>
         </nav>
 
         <div class="holder" id="living-room">
@@ -27,9 +27,9 @@
             <div class="bulp"></div>
         </label>
             <div class="slider-holder">
-                <input type="range" value="0" class="slider" data-room="living-room-slider">
+                <input type="range" value="0" class="slider">
                 <div class="tooltip">
-                    <p class="output">1</p>
+                    <p class="output"></p>
                 </div>
             </div>
         </div>
@@ -41,9 +41,9 @@
                 <div class="bulp"></div>
             </label>
             <div class="slider-holder">
-                <input type="range" value="0" class="slider" id="range-bathroom" data-room="living-bathroom">
+                <input type="range" value="0" class="slider" id="range-bathroom">
                 <div class="tooltip">
-                    <p class="output">12</p>
+                    <p class="output"></p>
                 </div>
             </div>
         </div>
@@ -54,9 +54,9 @@
                 <div class="bulp"></div>
             </label>
             <div class="slider-holder">
-                <input type="range" value="0" class="slider" id="range-stairs" data-room="living-stairs">
+                <input type="range" value="0" class="slider" id="range-stairs">
                 <div class="tooltip">
-                    <p class="output">13</p>
+                    <p class="output"></p>
                 </div>
             </div>
         </div>
@@ -67,12 +67,13 @@
             <div class="bulp"></div>
         </label>
             <div class="slider-holder">
-                <input type="range" value="0" class="slider" id="rangeS1" data-room="living-room1">
+                <input type="range" value="0" class="slider" id="rangeS1">
                 <div class="tooltip">
-                    <p class="output">14</p>
+                    <p class="output"></p>
                 </div>
             </div>
         </div>
+
         <div class="holder" id="room2">
             <label>
                 <input type="checkbox" class="checkbox">
@@ -80,12 +81,13 @@
                 <div class="bulp"></div>
             </label>
             <div class="slider-holder">
-                <input type="range" value="0" class="slider" id="rangeS2" data-room="living-room2">
+                <input type="range" value="0" class="slider" id="rangeS2">
                 <div class="tooltip">
-                    <p class="output">15</p>
+                    <p class="output"></p>
                 </div>
             </div>
         </div>
+
     </section>
     <script src="/js/light.js"></script>
 </body>

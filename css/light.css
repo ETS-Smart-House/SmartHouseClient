@@ -52,7 +52,12 @@ nav button:hover {
 }
 
 nav button.active {
-    color: red
+    opacity: 1;
+    box-shadow: 0 0 5px white;
+}
+
+nav button.light-on {
+    color: red;
 }
 
 
@@ -94,7 +99,7 @@ nav button.active {
     width: 75px;
     height: 75px;
     background-color: #333;
-    border: 6px solid #212121;
+    border: 5px solid #212121;
     border-radius: 20px;
     transition: 0.5s;
     display: flex;
@@ -202,4 +207,113 @@ nav button.active {
 
 .slider:hover+.tooltip {
     opacity: 1;
+}
+
+@media only screen and (max-width: 1800px) {
+    .holder .bulp {
+        width: 400px;
+        height: 400px;
+        top: -500px;
+    }
+    nav {
+        width: 220px;
+    }
+    .holder {
+        top: 0px;
+    }
+    .holder label {
+        top: 600px;
+    }
+    .slider-holder {
+        top: 720px;
+    }
+    .slider-holder .tooltip {
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .holder .bulp {
+        width: 400px;
+        height: 400px;
+        top: -500px;
+    }
+    nav {
+        width: 220px;
+    }
+    .holder {
+        top: 0px;
+    }
+    .holder label {
+        top: 500px;
+    }
+    .slider-holder {
+        top: 650px;
+    }
+    .slider-holder .tooltip {
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .holder .bulp {
+        width: 350px;
+        height: 350px;
+        top: -400px;
+    }
+    nav {
+        width: 220px;
+    }
+    .holder {
+        top: 0px;
+    }
+    .holder label {
+        top: 450px;
+    }
+    .slider-holder {
+        top: 600px;
+    }
+    .slider-holder .tooltip {
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .holder .bulp {
+        width: 250px;
+        height: 250px;
+        top: -300px;
+    }
+    nav {
+        width: 200px;
+    }
+    .holder {
+        top: 0px;
+    }
+    .holder label {
+        top: 350px;
+    }
+    .slider-holder {
+        top: 500px;
+    }
+    .slider-holder .tooltip {
+        height: 50px;
+    }
+    .holder label {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        height: 80px;
+    }
+    .holder label input {
+        appearance: none;
+    }
+    .holder label span {
+        transform: translateY(-50%);
+        width: 65px;
+        height: 70px;
+    }
+    .holder label input:checked~span {
+        left: 75px;
+    }
 }

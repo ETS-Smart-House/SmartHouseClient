@@ -1,5 +1,6 @@
 let buttons = document.querySelectorAll("button");
 let sliders = document.querySelectorAll(".slider");
+let checkboxes = document.querySelectorAll('.holder input[type=checkbox]')
 
 /**
  * Selects the active room for lighting control
@@ -22,7 +23,7 @@ function selectActiveRoom(e) {
     }
 
     // Nadji sobu
-    const room = e.target.dataset.room;
+    const room = e.target.getAttribute('id');
 
     // Daj joj klasu 'active' kako bi postala display: block
     activeHolder = document.querySelector(`.holder#${room}`)
@@ -31,14 +32,64 @@ function selectActiveRoom(e) {
 buttons.forEach(btn => btn.addEventListener('click', selectActiveRoom))
 
 /**
- * Changes the slider label 
+ * Change the slider value
  * 
  * @param {Event} e 
  */
-function changeSliderLabel(e) {
+function changeSliderValue(e) {
     const value = e.target.value;
 
-    const label = e.target.nextElementSibling.querySelector('.output')
-    label.innerHTML = value
+    const container = e.target.parentElement.parentElement;
+
+    const containerId = container.getAttribute('id')
+
+    setValue(containerId, value)
 }
-sliders.forEach(slide => slide.addEventListener('input', changeSliderLabel))
+sliders.forEach(slide => slide.addEventListener('input', changeSliderValue))
+
+function toggleSliderValue(e) {
+    const value = e.currentTarget.checked;
+    const container = e.target.parentElement.parentElement;
+    const containerId = container.getAttribute('id')
+
+
+    switch (value) {
+        case true:
+            setValue(containerId, 50)
+            break;
+        default:
+            setValue(containerId, 0)
+            break;
+    }
+}
+checkboxes.forEach(checkbox => checkbox.addEventListener('click', toggleSliderValue))
+
+function setValue(id, value) {
+    console.log(id, value);
+    const slider = document.querySelector(`.holder#${id} input[type=range]`)
+    const checkbox = document.querySelector(`.holder#${id} input[type=checkbox]`)
+    const output = document.querySelector(`.holder#${id} .tooltip .output`)
+    const sidebarBtn = document.querySelector(`button#${id}`)
+    const bulb = document.querySelector(`.holder#${id} .bulp`)
+
+    // Slider
+    slider.value = value;
+
+    // Sidebar button
+    // Checkbox
+    if (value > 1) {
+        sidebarBtn.classList.add('light-on')
+        checkbox.checked = true
+    } else {
+        sidebarBtn.classList.remove('light-on')
+        checkbox.checked = false
+    }
+
+    // Label
+    output.innerHTML = value
+
+    const opacity = value > 20 ? value / 100 : 0.2
+
+    bulb.style.opacity = opacity
+    bulb.style.filter = `drop-shadow(0 0 ${value/2}px #fff)`
+}
