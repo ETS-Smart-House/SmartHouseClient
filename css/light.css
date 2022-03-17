@@ -279,6 +279,7 @@ nav button.light-on {
 }
 
 @media only screen and (max-width: 1300px) {
+
     .holder .bulp {
         width: 250px;
         height: 250px;
@@ -309,7 +310,6 @@ nav button.light-on {
         appearance: none;
     }
     .holder label span {
-        transform: translateY(-50%);
         width: 65px;
         height: 70px;
     }

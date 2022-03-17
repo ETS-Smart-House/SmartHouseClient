@@ -8,7 +8,6 @@ const addAnotherBtn = document.querySelector('#add-another')
 
 addEventListener("DOMContentLoaded", () => {
     // API poziv za temperaturu
-    console.log('loadewd')
 })
 
 const datePicker = new Datepicker(calendarContainer, {
@@ -20,12 +19,10 @@ const datePicker = new Datepicker(calendarContainer, {
 
 function changeDate(e) {
     const selectedDate = new Date(e.detail.date);
-    console.log(selectedDate)
 }
 calendarContainer.addEventListener('changeDate', changeDate)
 
 function changeFloor(e) {
-    console.log(e.target.value)
 }
 floorInput.addEventListener('change', changeFloor)
 

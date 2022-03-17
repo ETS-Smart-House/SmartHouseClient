@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const port = 3000
 
@@ -16,16 +17,28 @@ const temp = {
     }
 }
 
+const light = {}
+
+app.use(cors())
+app.use(express.json());
+
+app.post('/temp', (req, res) => {
+    const body = req.body;
+    res.json(temp)
+})
+
 app.get('/temp', (req, res) => {
     res.json(temp)
 })
 
+app.post('/light', (req, res) => {
+    const {room, value} = req.body;
+    light[room] = parseInt(value)
+    res.send('Hello World!')
+})
 
 app.get('/light', (req, res) => {
-
-    // Light
-
-    res.send('Hello World!')
+    res.json(light)
 })
 
 app.listen(port, () => {

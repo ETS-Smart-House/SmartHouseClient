@@ -1,11 +1,19 @@
-let buttons = document.querySelectorAll("button");
-let sliders = document.querySelectorAll(".slider");
-let checkboxes = document.querySelectorAll('.holder input[type=checkbox]')
+const buttons = document.querySelectorAll("button");
+const sliders = document.querySelectorAll(".slider");
+const checkboxes = document.querySelectorAll('.holder input[type=checkbox]')
+
+window.addEventListener('load', async() => {
+    const {data, status} = await axios.get('http://localhost:3000/light')
+    Object.keys(data).forEach(id => {
+        const value = data[id]
+        setValue(id, value, false)
+    })
+});
 
 /**
  * Selects the active room for lighting control
- * 
- * @param {Event} e 
+ *
+ * @param {Event} e
  */
 function selectActiveRoom(e) {
 
@@ -29,12 +37,13 @@ function selectActiveRoom(e) {
     activeHolder = document.querySelector(`.holder#${room}`)
     activeHolder.classList.add('active')
 }
+
 buttons.forEach(btn => btn.addEventListener('click', selectActiveRoom))
 
 /**
  * Change the slider value
- * 
- * @param {Event} e 
+ *
+ * @param {Event} e
  */
 function changeSliderValue(e) {
     const value = e.target.value;
@@ -45,6 +54,7 @@ function changeSliderValue(e) {
 
     setValue(containerId, value)
 }
+
 sliders.forEach(slide => slide.addEventListener('input', changeSliderValue))
 
 function toggleSliderValue(e) {
@@ -62,10 +72,10 @@ function toggleSliderValue(e) {
             break;
     }
 }
+
 checkboxes.forEach(checkbox => checkbox.addEventListener('click', toggleSliderValue))
 
-function setValue(id, value) {
-    console.log(id, value);
+function setValue(id, value, sendToApi = true) {
     const slider = document.querySelector(`.holder#${id} input[type=range]`)
     const checkbox = document.querySelector(`.holder#${id} input[type=checkbox]`)
     const output = document.querySelector(`.holder#${id} .tooltip .output`)
@@ -91,5 +101,13 @@ function setValue(id, value) {
     const opacity = value > 20 ? value / 100 : 0.2
 
     bulb.style.opacity = opacity
-    bulb.style.filter = `drop-shadow(0 0 ${value/2}px #fff)`
+    bulb.style.filter = `drop-shadow(0 0 ${value / 2}px #fff)`
+
+    // Poziv za bazu
+
+    axios.post('http://localhost:3000/light', {
+            room: id,
+            value: value
+        }
+    )
 }
