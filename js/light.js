@@ -3,7 +3,7 @@ const sliders = document.querySelectorAll(".slider");
 const checkboxes = document.querySelectorAll('.holder input[type=checkbox]')
 
 window.addEventListener('load', async() => {
-    const {data, status} = await axios.get('http://localhost:3000/light')
+    const { data, status } = await axios.get('http://localhost:3000/light')
     Object.keys(data).forEach(id => {
         const value = data[id]
         setValue(id, value, false)
@@ -100,14 +100,13 @@ function setValue(id, value, sendToApi = true) {
 
     const opacity = value > 20 ? value / 100 : 0.2
 
-    bulb.style.opacity = opacity
+    // bulb.style.opacity = opacity
     bulb.style.filter = `drop-shadow(0 0 ${value / 2}px #fff)`
 
     // Poziv za bazu
 
     axios.post('http://localhost:3000/light', {
-            room: id,
-            value: value
-        }
-    )
+        room: id,
+        value: value
+    })
 }

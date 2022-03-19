@@ -186,7 +186,7 @@ header .quick-temperature .indoor-temperature .label:hover~.value {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     color: #FFFFFF;
-    background-color: #00A4BD;
+    background-color: #00439b;
 }
 
 .content .about .controls li .dropdown-content a {
@@ -196,13 +196,14 @@ header .quick-temperature .indoor-temperature .label:hover~.value {
     justify-content: center;
     color: #fff;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .content .about .controls li .dropdown-content a:hover,
 .content .about .controls li:nth-child(2):hover {
-    transition: 0.2s;
+    transition: 0.3s;
     color: #FFFFFF;
-    background-color: #00A4BD;
+    background-color: #00439b;
 }
 
 .logo {
