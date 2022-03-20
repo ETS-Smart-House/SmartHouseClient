@@ -22,8 +22,7 @@ function changeDate(e) {
 }
 calendarContainer.addEventListener('changeDate', changeDate)
 
-function changeFloor(e) {
-}
+function changeFloor(e) {}
 floorInput.addEventListener('change', changeFloor)
 
 function changeMode(e) {

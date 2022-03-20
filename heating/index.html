@@ -22,35 +22,45 @@
                <option value="first">Prvi sprat</option>
                 <option value="second">Drugi sprat</option>
             </select>
-
-            <fieldset class="mode-selector">
-                <input type="radio" id="auto" name="mode" value="auto" checked>
-                <label for="auto">Auto</label>
-
-                <input type="radio" id="manual" name="mode" value="manual">
-                <label for="manual">Manual</label>
-            </fieldset>
             <!-- <input type="text" name="calendar"> -->
-            <div class="calendar hidden"></div>
         </form>
-    </section>
-    <section class="content auto">
-        Temperatura je <input type="number" name="auto-temp" id="auto-temp" value="22">
-    </section>
 
-    <section class="content manual hidden">
-        <section class="values">
-            <fieldset>
-                <input type="time" name="from" id="from">
-                <input type="time" name="to" id="to">
-                <input type="number" name="temp" id="temp" value="22">
-            </fieldset>
-        </section>
 
-        <button id="add-another">Add another</button>
+        </form>
+        <div class="calendar "></div>
+
     </section>
 
+    <section class="modes">
 
+        <input type="radio" name="mod" id="auto" class="hidden">
+        <label for="auto">
+            <section class="auto">
+                <h1>Automatski rezim</h1>
+                <div class="line"></div>
+                Temperatura je <input type="number" name="auto-temp" id="auto-temp" value="22">
+                <div class="button-box">
+                    <input type="submit">
+                    <input type="button" value="Stop">
+                </div>
+            </section>
+        </label>
+        <input type="radio" name="mod" id="manual" class="hidden">
+        <label for="manual">
+            <section class="content manual hidden">
+            <h1>Manuelni rezim</h1>
+            <div class="line"></div>
+
+            <section class="values">
+                <fieldset>
+                    <input type="time" name="from" id="from">
+                    <input type="time" name="to" id="to">
+                    <input type="number" name="temp" id="temp" value="22" max="40">
+                </fieldset>
+            </section>
+            <button id="add-another">Add another</button>
+        </section></label>
+    </section>
 
 
     <script src="/js/heating.js" defer></script>

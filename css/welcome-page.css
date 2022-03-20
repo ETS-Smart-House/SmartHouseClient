@@ -315,7 +315,7 @@ footer ul li {
     }
     footer {
         margin: 0;
-        margin-top: -50px;
+        margin-top: -5px;
         padding: 10px;
     }
     footer ul {
@@ -382,20 +382,11 @@ footer ul li {
     .content {
         top: 150px;
     }
-    .content .about .controls {
-        width: 700px;
-    }
-    .content .about .controls li .stats {
-        padding: 15px 80px;
-    }
-    .content .about .controls li .dropdown button {
-        padding: 15px 80px;
-    }
     .content .about .controls li .dropdown-content a {
-        padding: 10px 70px;
+        padding: 20px 70px;
     }
     footer {
         position: absolute;
-        bottom: -15px;
+        bottom: -110px;
     }
 }
