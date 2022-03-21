@@ -37,8 +37,14 @@
         <label for="auto">
             <section class="auto">
                 <h1>Automatski rezim</h1>
+                <p>Podrazumeva održavanje temperature tokom celog dana, uz malu uštedu energije</p> 
                 <div class="line"></div>
-                Temperatura je <input type="number" name="auto-temp" id="auto-temp" value="22">
+                <p>Temperatura je</p> 
+                <div class="number-box">
+                    <button class="num-button" id="decrement" onclick="stepper(this)"> - </button>
+                    <input  type="number" name="auto-temp" id="my-input" value="22" step="1" max="40" >
+                    <button class="num-button" id="increment" onclick="stepper(this)"> + </button>
+                </div>
                 <div class="button-box">
                     <input type="submit">
                     <input type="button" value="Stop">
@@ -50,16 +56,21 @@
             <section class="content manual hidden">
             <h1>Manuelni rezim</h1>
             <div class="line"></div>
-
             <section class="values">
                 <fieldset>
                     <input type="time" name="from" id="from">
                     <input type="time" name="to" id="to">
-                    <input type="number" name="temp" id="temp" value="22" max="40">
+                    <input type="number" name="temp" id="temp" value="22" max="40" >
                 </fieldset>
+
+
             </section>
-            <button id="add-another">Add another</button>
-        </section></label>
+            <div class="button-section">
+                <button id="add-another">Add another</button>
+                <input type="submit">
+            </div>
+            </section>
+        </label>
     </section>
 
 

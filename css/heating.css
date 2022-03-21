@@ -20,6 +20,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 5px;
+    background-color: #0047a54b;
 }
 
 .sidebar form {
@@ -45,20 +46,65 @@ body {
     flex: 5;
     display: flex;
     flex-direction: column;
-    background-color: red;
-    padding: 20px;
-}
-
-.modes label .auto {
-    background-color: blue;
-    display: flex;
-    flex-direction: column;
     padding: 20px;
 }
 
 .modes label .line {
-    border-top: 1px solid;
+    border-top: 1px solid black;
     margin-bottom: 20px;
+}
+
+.modes label .auto {
+    padding: 20px;
+}
+
+.number-box {
+    margin: 20px;
+    display: flex;
+    max-width: 200px;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 45px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    text-align: center;
+    font-size: 40px;
+    border: none;
+    background-color: #ffffff;
+    color: #202030;
+}
+
+input[type="number"]:focus {
+    border: none;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.num-button {
+    color: #3264fe;
+    background-color: #ffffff;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#decrement {
+    padding: 15px 5px 15px 25px;
+    border-radius: 45px 0 0 45px;
+}
+
+#increment {
+    padding: 15px 25px 15px 5px;
+    border-radius: 0 45px 45px 0;
 }
 
 .modes label .auto input[type="number"] {
@@ -77,15 +123,56 @@ body {
 .modes label .auto input[type="submit"],
 .modes label .auto input[type="button"] {
     margin: 5px;
-    background-color: red;
     padding: 10px 50px;
 }
 
+.modes label .auto {}
+
 .modes label .manual {
-    background-color: green;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 20px;
+}
+
+.modes label .manual .values {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 400px;
+    font-size: 18pt;
+}
+
+.modes label .manual .values fieldset {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18pt;
+    color: white;
+}
+
+.modes label .manual .values fieldset input {
+    width: 350px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 18pt;
+}
+
+.modes label .manual .button-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modes label .manual .button-section button,
+.modes label .manual .button-section input[type="submit"] {
+    padding: 20px 50px;
+    margin: 5px;
+    border: none;
+    outline: none;
 }
 
 

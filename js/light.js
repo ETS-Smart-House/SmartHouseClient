@@ -2,11 +2,15 @@ const buttons = document.querySelectorAll("button");
 const sliders = document.querySelectorAll(".slider");
 const checkboxes = document.querySelectorAll('.holder input[type=checkbox]')
 
+// const apiUrl = 'http://localhost:3000'
+const apiUrl = 'http://192.168.3.3:8010/light'
+
 window.addEventListener('load', async() => {
-    const { data, status } = await axios.get('http://localhost:3000/light')
+    const { data, status } = await axios.get(apiUrl)
     Object.keys(data).forEach(id => {
-        const value = data[id]
-        setValue(id, value, false)
+        const room = data[id]['room']
+        const value = data[id]['value']
+        setValue(room, value, false)
     })
 });
 
@@ -52,10 +56,20 @@ function changeSliderValue(e) {
 
     const containerId = container.getAttribute('id')
 
-    setValue(containerId, value)
+    setValue(containerId, value, false)
 }
 
 sliders.forEach(slide => slide.addEventListener('input', changeSliderValue))
+
+function sendSliderValue(e) {
+    const value = e.target.value;
+    const container = e.target.parentElement.parentElement;
+
+    const containerId = container.getAttribute('id')
+    setValue(containerId, value)
+
+}
+sliders.forEach(slide => slide.addEventListener('change', sendSliderValue))
 
 function toggleSliderValue(e) {
     const value = e.currentTarget.checked;
@@ -104,9 +118,10 @@ function setValue(id, value, sendToApi = true) {
     bulb.style.filter = `drop-shadow(0 0 ${value / 2}px #fff)`
 
     // Poziv za bazu
-
-    axios.post('http://localhost:3000/light', {
-        room: id,
-        value: value
-    })
+    if (sendToApi) {
+        axios.post(apiUrl, {
+            room: id,
+            value: value
+        })
+    }
 }
