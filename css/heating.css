@@ -4,9 +4,10 @@
     padding: 0;
 }
 
-input[type="radio"] {
+
+/* input[type="radio"] {
     display: none;
-}
+} */
 
 body {
     background-color: #006eff;
@@ -120,16 +121,19 @@ input::-webkit-inner-spin-button {
     max-width: 200px;
 }
 
+.modes .content {
+    border: 1px solid red;
+    max-width: 1500px;
+}
+
 .modes label .auto input[type="submit"],
 .modes label .auto input[type="button"] {
     margin: 5px;
     padding: 10px 50px;
 }
 
-.modes label .auto {}
-
 .modes label .manual {
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -139,8 +143,10 @@ input::-webkit-inner-spin-button {
 .modes label .manual .values {
     overflow: scroll;
     overflow-x: hidden;
-    height: 400px;
     font-size: 18pt;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
 }
 
 .modes label .manual .values fieldset {
@@ -149,6 +155,9 @@ input::-webkit-inner-spin-button {
     align-items: center;
     font-size: 18pt;
     color: white;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid white;
 }
 
 .modes label .manual .values fieldset input {
@@ -165,6 +174,10 @@ input::-webkit-inner-spin-button {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -95%);
 }
 
 .modes label .manual .button-section button,
