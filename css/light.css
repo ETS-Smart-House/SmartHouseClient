@@ -14,6 +14,11 @@ body {
 
 /* nav */
 
+nav button.active {
+    opacity: 1;
+    box-shadow: 0 0 5px white;
+}
+
 nav {
     display: flex;
     flex-direction: column;
@@ -27,6 +32,13 @@ nav {
     padding: 15px;
     background-color: #212121;
     filter: drop-shadow(0px 0px 10px black);
+}
+
+nav #room-name {
+    color: white;
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold;
 }
 
 nav button {
@@ -43,6 +55,7 @@ nav button {
     border-radius: 10px;
     border: none;
     outline: none;
+    font-size: 12pt;
 }
 
 nav button:active {
@@ -57,13 +70,7 @@ nav button:hover {
     transition: 0.2s;
 }
 
-nav button.active {
-    opacity: 1;
-    box-shadow: 0 0 5px white;
-}
-
 nav button.light-on {
-    box-shadow: 0 0 3px 1px white;
     font-weight: bold;
     opacity: 1;
     background-color: white;

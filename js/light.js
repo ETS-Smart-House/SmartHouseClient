@@ -39,6 +39,10 @@ function selectActiveRoom(e) {
     // Daj joj klasu 'active' kako bi postala display: block
     activeHolder = document.querySelector(`.holder#${room}`)
     activeHolder.classList.add('active')
+
+    //Promeni ime 
+    const name = document.querySelector('#room-name')
+    name.innerHTML = e.target.innerHTML
 }
 
 buttons.forEach(btn => btn.addEventListener('click', selectActiveRoom))
