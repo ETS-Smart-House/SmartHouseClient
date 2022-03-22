@@ -2,7 +2,7 @@ const buttons = document.querySelectorAll("button");
 const sliders = document.querySelectorAll(".slider");
 const checkboxes = document.querySelectorAll('.holder input[type=checkbox]')
 
-const apiUrl = 'http://localhost:8012'
+const apiUrl = 'http://localhost:8012/light'
 
 window.addEventListener('load', async() => {
     const { data, status } = await axios.get(apiUrl)
