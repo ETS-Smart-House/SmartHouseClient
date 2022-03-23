@@ -249,9 +249,9 @@ nav .nav-holder button:hover {
     .istorija .h-box {
         padding: 10px;
     }
-    .istorija .h-box img {
-        max-width: 100px;
-        max-height: 100px;
+    img {
+        max-width: 250px;
+        max-height: 250px;
     }
     .istorija .h-box .h-text {
         padding: 20px;
@@ -275,6 +275,18 @@ nav .nav-holder button:hover {
     }
     .istorija .hx-line {
         margin: 10px;
+    }
+    .trenutno {
+        border: 1px solid red;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    .trenutno .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -30px;
     }
 }
 
