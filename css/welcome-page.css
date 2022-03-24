@@ -465,7 +465,7 @@
     @media only screen and (max-width: 1000px) {
         .content {
             max-width: 800px;
-            max-height: 350px;
+            max-height: 300px;
             margin: 10px auto;
         }
         .content .about {
@@ -479,10 +479,16 @@
         .content .about .description {
             position: relative;
             text-align: center;
-            letter-spacing: 1px;
             max-width: 300px;
-            padding: 10px;
-            font-size: 13pt;
+            margin-bottom: 0px;
+        }
+        .content .about .description p {
+            position: relative;
+            text-align: center;
+            letter-spacing: 0.5px;
+            max-width: 350px;
+            padding: 13px;
+            font-size: 10pt;
             margin-bottom: 0px;
         }
         .content .about .controls li .stats {
@@ -513,7 +519,7 @@
     @media only screen and (max-width: 600px) {
         .content {
             flex-direction: column;
-            margin: 150px auto;
+            margin: 10px auto;
         }
         .content .about {
             margin: 0;

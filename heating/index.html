@@ -14,58 +14,59 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 </head>
+
 <body>
-<section class="sidebar">
-    <select name="floors">
+    <section class="sidebar">
+        <select name="floors">
         <option value="first">Prvi sprat</option>
         <option value="second">Drugi sprat</option>
     </select>
-    <div class="switch-button mode">
-        <input class="switch-button-checkbox" type="checkbox" id="mode"/>
-        <label class="switch-button-label" for="mode">
+        <div class="switch-button mode">
+            <input class="switch-button-checkbox" type="checkbox" id="mode" />
+            <label class="switch-button-label" for="mode">
             <span class="switch-button-label-span">Auto</span>
         </label>
-    </div>
-
-    <a href="#" class="save">Save</a>
-
-    <div class="calendar"></div>
-</section>
-
-<section class="floors">
-    <section class="floor floor-0 modes active">
-        <div class="mode auto active">
-            <h2>Automatski rezim</h2>
-            <div class="number-box">
-                <a href="#" class="num-button decrement" onclick="decrement(this)">-</a>
-                <input type="number" name="auto-temp" value="22" step="1" max="40" min="0" class="auto-temp">
-                <a href="#" class="num-button increment" onclick="increment(this)">+</a>
-            </div>
         </div>
-        <div class="mode manual hidden">
-            <h2>Manuelni rezim</h2>
-            <div class="rows"></div>
-            <a href="#" class="add" onclick="addRowEvent(this)">Add</a>
-        </div>
+
+        <a href="#" class="save">Save</a>
+
+        <div class="calendar"></div>
     </section>
-    <section class="floor floor-1 modes hidden">
-        <div class="mode auto">
-            <h2>Automatski rezim</h2>
-            <div class="number-box">
-                <a href="#" class="num-button decrement" onclick="decrement(this)">-</a>
-                <input type="number" name="auto-temp" value="22" step="1" max="40" min="0" class="auto-temp">
-                <a href="#" class="num-button increment" onclick="increment(this)">+</a>
-            </div>
-        </div>
-        <div class="mode manual">
-            <h2>Manuelni rezim</h2>
-            <div class="rows"></div>
-            <a href="#" class="add" onclick="addRowEvent(this)">Add</a>
-        </div>
-    </section>
-</section>
 
-<script src="/js/heating.js" defer></script>
+    <section class="floors">
+        <section class="floor floor-0 modes active">
+            <div class="mode auto active">
+                <h2>Automatski rezim</h2>
+                <div class="number-box">
+                    <a href="#" class="num-button decrement" onclick="decrement(this)">-</a>
+                    <input type="number" name="auto-temp" value="22" step="1" max="40" min="0" class="auto-temp">
+                    <a href="#" class="num-button increment" onclick="increment(this)">+</a>
+                </div>
+            </div>
+            <div class="mode manual hidden">
+                <h2>Manuelni rezim</h2>
+                <div class="rows"></div>
+                <a href="#" class="add" onclick="addRowEvent(this)">Add</a>
+            </div>
+        </section>
+        <section class="floor floor-1 modes hidden">
+            <div class="mode auto">
+                <h2>Automatski rezim</h2>
+                <div class="number-box">
+                    <a href="#" class="num-button decrement" onclick="decrement(this)">-</a>
+                    <input type="number" name="auto-temp" value="22" step="1" max="40" min="0" class="auto-temp">
+                    <a href="#" class="num-button increment" onclick="increment(this)">+</a>
+                </div>
+            </div>
+            <div class="mode manual">
+                <h2>Manuelni rezim</h2>
+                <div class="rows"></div>
+                <a href="#" class="add" onclick="addRowEvent(this)">Add</a>
+            </div>
+        </section>
+    </section>
+
+    <script src="/js/heating.js" defer></script>
 </body>
 
 </html>

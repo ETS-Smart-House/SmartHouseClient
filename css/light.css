@@ -88,6 +88,7 @@ nav button.light-on {
     width: 500px;
     display: none;
 }
+
 .holder.active,
 .slider.active {
     display: block
@@ -194,7 +195,6 @@ nav button.light-on {
 
 .slider:hover {
     opacity: 1;
-
 }
 
 .slider::-webkit-slider-thumb {
@@ -331,4 +331,62 @@ nav button.light-on {
     .holder label input:checked~span {
         left: 75px;
     }
+}
+
+@media only screen and (max-width: 1000px) {
+    .holder .bulp {
+        width: 200px;
+        height: 200px;
+        top: -250px;
+    }
+    nav {
+        width: 200px;
+        height: 300px;
+    }
+    nav button {
+        padding: 20px 0px;
+        margin: 5px;
+    }
+    .holder {
+        position: absolute;
+        top: 0px;
+        left: 60%;
+    }
+    .holder label {
+        top: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        height: 85px;
+        position: absolute;
+    }
+    .slider-holder {
+        top: 350px;
+    }
+    .slider-holder .tooltip {
+        height: 50px;
+    }
+    .holder label input {
+        appearance: none;
+    }
+    .holder label span {
+        width: 65px;
+        height: 70px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 75px;
+        height: 75px;
+        background-color: #333;
+        border: 5px solid #212121;
+        border-radius: 20px;
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .holder label input:checked~span {
+        left: 75px;
+    }
+    .holder label {}
 }

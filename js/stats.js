@@ -21,12 +21,12 @@ navLinks.forEach(navLink => navLink.addEventListener('click', selectActiveNav))
 
 const apiUrl = 'http://localhost:8012/measurements'
 
-window.addEventListener("DOMContentLoaded", async () => {
+window.addEventListener("DOMContentLoaded", async() => {
 
     const location = 'indoor'
 
     const response = await axios.get(apiUrl, {
-        params: {location}
+        params: { location }
     })
 
     const historyPanel = document.querySelector(`section.holder#${location} .split.istorija`)
@@ -36,10 +36,10 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     for (const item of response.data) {
         if (item['date'] === today) {
-            const {itemMarkup, line} = generateIndoorNowItem(item['temperature'], item['humidity'])
+            const { itemMarkup, line } = generateIndoorNowItem(item['temperature'], item['humidity'])
             nowPanel.append(itemMarkup)
         } else {
-            const {itemMarkup, line} = generateIndoorHistoryItem(item['date'], item['temperature'], item['humidity'])
+            const { itemMarkup, line } = generateIndoorHistoryItem(item['date'], item['temperature'], item['humidity'])
             historyPanel.append(itemMarkup)
             historyPanel.append(line)
         }
@@ -67,7 +67,7 @@ function generateIndoorHistoryItem(date, temperature, humidity) {
     const line = document.createElement('div')
     line.classList.add('hx-line')
 
-    return {itemMarkup, line}
+    return { itemMarkup, line }
 }
 
 
@@ -89,5 +89,5 @@ function generateIndoorNowItem(temperature, humidity) {
     const line = document.createElement('div')
     line.classList.add('hx-line')
 
-    return {itemMarkup, line}
+    return { itemMarkup, line }
 }

@@ -74,7 +74,6 @@ nav ul li a:hover {
 .trenutno {
     background-color: #006eff;
     color: white;
-    border-right: 2px solid black;
     padding: 15px;
 }
 
@@ -209,7 +208,6 @@ nav ul li a:hover {
         width: 60%;
         position: fixed;
     }
-
     .trenutno .box img {
         width: 300px;
         height: 300px;
@@ -218,45 +216,37 @@ nav ul li a:hover {
         left: -25%;
         transform: translatey(-50%);
     }
-
     .trenutno .box {
         top: 50%;
         left: 50%;
         transform: translate(-20%, -50%);
     }
-
     .trenutno .box .v-line {
         width: 1px;
         margin: 10px;
     }
-
     .trenutno .box .text .temperature,
     .trenutno .box .text .humidity,
     .trenutno .box .text .pressure {
         margin: 0px;
     }
-
     .trenutno .box .text .temperature {
         font-weight: 500;
         font-size: 3em;
     }
-
     .trenutno .box .text .humidity p:nth-child(1),
     .trenutno .box .text .pressure p:nth-child(1) {
         font-weight: 100;
         font-size: 2em;
     }
-
     .trenutno .box .text .humidity p:nth-child(2),
     .trenutno .box .text .pressure p:nth-child(2) {
         font-weight: 400;
         font-size: 2em;
     }
-
     .trenutno .box .text .pressure p span {
         font-size: 18px;
     }
-
     .istorija {
         position: relative;
         height: 100%;
@@ -264,52 +254,41 @@ nav ul li a:hover {
         left: 100%;
         transform: translate(-100%);
     }
-
     .istorija .h-box {
         padding: 10px;
     }
-
     img {
         max-width: 250px;
         max-height: 250px;
     }
-
     .istorija .h-box .h-text {
         padding: 20px;
     }
-
     .istorija .h-box .h-text .txt-section .h-temperature {
         font-size: 2em;
         font-weight: 500;
         padding: 10px;
     }
-
     .istorija .h-box .h-text .txt-section .h-humidity {
         font-size: 15px;
         font-weight: 200;
     }
-
     .istorija .h-box .h-text .hsx-line {
         border-bottom: 1px solid black;
     }
-
     .istorija .h-box .h-date {
         font-size: 15px;
         font-weight: 200;
         padding: 10px;
     }
-
     .istorija .hx-line {
         margin: 10px;
     }
-
     .trenutno {
-        border: 1px solid red;
         display: flex;
         margin: 0;
         padding: 0;
     }
-
     .trenutno .box {
         display: flex;
         justify-content: center;
@@ -327,13 +306,11 @@ nav ul li a:hover {
         width: auto;
         position: relative;
     }
-
     .trenutno {
         color: white;
         border-bottom: 3px solid black;
         border-right: none;
     }
-
     .trenutno .box {
         display: flex;
         justify-content: center;
@@ -342,7 +319,6 @@ nav ul li a:hover {
         left: 0;
         transform: translate(-50%, -0%);
     }
-
     .trenutno .box img {
         width: 200px;
         height: 200px;
@@ -351,11 +327,9 @@ nav ul li a:hover {
         left: 50%;
         transform: translate(50%, -0%);
     }
-
     .trenutno .box .v-line {
         display: none;
     }
-
     .trenutno .box .text {
         display: flex;
         flex-direction: column;
@@ -365,24 +339,20 @@ nav ul li a:hover {
         left: 50%;
         transform: translate(-50%);
     }
-
     .trenutno .box .text .temperature,
     .trenutno .box .text .humidity,
     .trenutno .box .text .pressure {
         margin: 20px;
     }
-
     .trenutno .box .text .temperature {
         font-weight: 500;
         font-size: 5em;
     }
-
     .trenutno .box .text .humidity p:nth-child(1),
     .trenutno .box .text .pressure p:nth-child(1) {
         font-weight: 100;
         font-size: 40px;
     }
-
     .trenutno .box .text .humidity p:nth-child(2),
     .trenutno .box .text .pressure p:nth-child(2) {
         font-weight: 400;
@@ -390,58 +360,47 @@ nav ul li a:hover {
         display: flex;
         align-items: flex-end;
     }
-
     .trenutno .box .text .pressure p span {
         margin-left: 5px;
     }
-
     .trenutno .box .text .pressure p span {
         font-size: 18px;
     }
-
     .istorija {
         position: relative;
         width: 100%;
         left: 100%;
     }
-
     .istorija .h-box {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 10px;
     }
-
     .istorija .h-box img {
         max-width: 100px;
         max-height: 100px;
     }
-
     .istorija .h-box .h-text {
         padding: 10px;
     }
-
     .istorija .h-box .h-text .txt-section .h-temperature {
         font-size: 3em;
         font-weight: 600;
         padding: 20px;
     }
-
     .istorija .h-box .h-text .txt-section .h-humidity {
         font-size: 25px;
         font-weight: 400;
     }
-
     .istorija .h-box .h-text .txt-section {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
     .istorija .h-box .h-text .hsx-line {
         border-bottom: 1px solid black;
     }
-
     .istorija .h-box .h-date {
         display: flex;
         align-items: center;
@@ -450,7 +409,6 @@ nav ul li a:hover {
         font-weight: 400;
         padding: 10px;
     }
-
     .istorija .hx-line {
         border-bottom: 3px solid black;
         margin: 30px;
