@@ -12,69 +12,60 @@
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/sr-latn.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 </head>
-
 <body>
-
-    <section class="sidebar">
-        <form id="heating-form">
-            <select name="floors" id="floors">
-               <option value="first">Prvi sprat</option>
-                <option value="second">Drugi sprat</option>
-            </select>
-            <!-- <input type="text" name="calendar"> -->
-        </form>
-
-
-        </form>
-        <div class="calendar "></div>
-
-    </section>
-
-    <section class="modes">
-
-        <input type="radio" name="mod" id="auto" class="hidden">
-        <label for="auto">
-            <section class="auto content">
-                <h1>Automatski rezim</h1>
-                <p>Podrazumeva održavanje temperature tokom celog dana, uz malu uštedu energije</p> 
-                <div class="line"></div>
-                <p>Temperatura je</p> 
-                <div class="number-box">
-                    <button class="num-button" id="decrement" onclick="stepper(this)"> - </button>
-                    <input  type="number" name="auto-temp" id="my-input" value="22" step="1" max="40" >
-                    <button class="num-button" id="increment" onclick="stepper(this)"> + </button>
-                </div>
-                <div class="button-box">
-                    <input type="submit">
-                    <input type="button" value="Stop">
-                </div>
-            </section>
+<section class="sidebar">
+    <select name="floors">
+        <option value="first">Prvi sprat</option>
+        <option value="second">Drugi sprat</option>
+    </select>
+    <div class="switch-button mode">
+        <input class="switch-button-checkbox" type="checkbox" id="mode"/>
+        <label class="switch-button-label" for="mode">
+            <span class="switch-button-label-span">Auto</span>
         </label>
-        <input type="radio" name="mod" id="manual" class="hidden">
-        <label for="manual">
-            <section class="content manual hidden">
-            <h1>Manuelni rezim</h1>
-            <div class="line"></div>
-            <section class="values">
-                <fieldset>
-                    <input type="time" name="from" id="from">
-                    <input type="time" name="to" id="to">
-                    <input type="number" name="temp" id="temp" value="22" max="40" >
-                </fieldset>
+    </div>
 
+    <a href="#" class="save">Save</a>
 
-            </section>
-            <div class="button-section">
-                <button id="add-another">Add another</button>
-                <input type="submit" name="submit-chose">
+    <div class="calendar"></div>
+</section>
+
+<section class="floors">
+    <section class="floor floor-0 modes active">
+        <div class="mode auto active">
+            <h2>Automatski rezim</h2>
+            <div class="number-box">
+                <a href="#" class="num-button decrement" onclick="decrement(this)">-</a>
+                <input type="number" name="auto-temp" value="22" step="1" max="40" min="0" class="auto-temp">
+                <a href="#" class="num-button increment" onclick="increment(this)">+</a>
             </div>
-            </section>
-        </label>
+        </div>
+        <div class="mode manual hidden">
+            <h2>Manuelni rezim</h2>
+            <div class="rows"></div>
+            <a href="#" class="add" onclick="addRowEvent(this)">Add</a>
+        </div>
     </section>
+    <section class="floor floor-1 modes hidden">
+        <div class="mode auto">
+            <h2>Automatski rezim</h2>
+            <div class="number-box">
+                <a href="#" class="num-button decrement" onclick="decrement(this)">-</a>
+                <input type="number" name="auto-temp" value="22" step="1" max="40" min="0" class="auto-temp">
+                <a href="#" class="num-button increment" onclick="increment(this)">+</a>
+            </div>
+        </div>
+        <div class="mode manual">
+            <h2>Manuelni rezim</h2>
+            <div class="rows"></div>
+            <a href="#" class="add" onclick="addRowEvent(this)">Add</a>
+        </div>
+    </section>
+</section>
 
-
-    <script src="/js/heating.js" defer></script>
+<script src="/js/heating.js" defer></script>
 </body>
 
 </html>

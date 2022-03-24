@@ -24,24 +24,30 @@ body {
     background-color: #0047a54b;
 }
 
-.sidebar form {
-    width: 100%;
-}
-
-.sidebar form select {
+.sidebar select {
     padding: 20px 50px;
     font-size: 20pt;
     font-weight: bold;
     width: 100%;
 }
 
-.sidebar form option {
+.sidebar option {
     font-size: 15pt;
     padding: 10px 20px;
     width: 100%;
 }
 
-.modes {
+.floors {
+    width: 100%;
+    position: relative;
+    flex: 5;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+
+.floors .modes {
     width: 100%;
     position: relative;
     flex: 5;
@@ -50,18 +56,20 @@ body {
     padding: 20px;
 }
 
-.modes label .line {
+.floors .modes .line {
     border-top: 1px solid black;
     margin-bottom: 20px;
 }
 
-.modes label .auto {
+.floors
+
+.floors .auto {
     padding: 20px;
 }
 
 .number-box {
     margin: 20px;
-    display: flex;
+    display: inline-flex;
     max-width: 200px;
     justify-content: center;
     align-items: center;
@@ -96,19 +104,20 @@ input::-webkit-inner-spin-button {
     border: none;
     font-size: 40px;
     cursor: pointer;
+    text-decoration: none;
 }
 
-#decrement {
+.decrement {
     padding: 15px 5px 15px 25px;
     border-radius: 45px 0 0 45px;
 }
 
-#increment {
+.increment {
     padding: 15px 25px 15px 5px;
     border-radius: 0 45px 45px 0;
 }
 
-.modes label .auto input[type="number"] {
+.modes .auto input[type="number"] {
     max-width: 70px;
     height: 70px;
     margin: 10px;
@@ -121,18 +130,7 @@ input::-webkit-inner-spin-button {
     max-width: 200px;
 }
 
-.modes .content {
-    border: 1px solid red;
-    max-width: 1500px;
-}
-
-.modes label .auto input[type="submit"],
-.modes label .auto input[type="button"] {
-    margin: 5px;
-    padding: 10px 50px;
-}
-
-.modes label .manual {
+.modes .manual {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -140,7 +138,7 @@ input::-webkit-inner-spin-button {
     padding: 20px;
 }
 
-.modes label .manual .values {
+.modes .manual .values {
     overflow: scroll;
     overflow-x: hidden;
     font-size: 18pt;
@@ -149,7 +147,7 @@ input::-webkit-inner-spin-button {
     height: 350px;
 }
 
-.modes label .manual .values fieldset {
+.modes .manual .values fieldset {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -160,7 +158,7 @@ input::-webkit-inner-spin-button {
     border-bottom: 1px solid white;
 }
 
-.modes label .manual .values fieldset input {
+.modes .manual .values fieldset input {
     width: 350px;
     height: 50px;
     text-align: center;
@@ -170,7 +168,7 @@ input::-webkit-inner-spin-button {
     font-size: 18pt;
 }
 
-.modes label .manual .button-section {
+.modes .manual .button-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,8 +178,8 @@ input::-webkit-inner-spin-button {
     transform: translate(-50%, -95%);
 }
 
-.modes label .manual .button-section button,
-.modes label .manual .button-section input[type="submit"] {
+.modes .manual .button-section button,
+.modes .manual .button-section input[type="submit"] {
     padding: 20px 50px;
     margin: 5px;
     border: none;
@@ -189,6 +187,121 @@ input::-webkit-inner-spin-button {
 }
 
 
-/* .hidden {
-    display: none;
-} */
+.switch-button {
+    background: rgba(255, 255, 255, 0.56);
+    border-radius: 30px;
+    overflow: hidden;
+    width: 120px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #155fff;
+    position: relative;
+    padding-right: 120px;
+    position: relative;
+}
+
+.switch-button:before {
+    content: "Manual";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.switch-button-checkbox {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+}
+
+.switch-button-checkbox:checked + .switch-button-label:before {
+    transform: translateX(120px);
+    transition: transform 300ms linear;
+}
+
+.switch-button-checkbox + .switch-button-label {
+    position: relative;
+    padding: 15px 0;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+}
+
+.switch-button-checkbox + .switch-button-label:before {
+    content: "";
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+    transform: translateX(0);
+    transition: transform 300ms;
+}
+
+.switch-button-checkbox + .switch-button-label .switch-button-label-span {
+    position: relative;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.rows .row {
+    text-align: center;
+}
+
+.rows .row input[type=time] {
+    padding: 20px;
+    margin: 0 15px;
+    border-radius: 45px;
+    font-size: 30px;
+    border: 0;
+    box-shadow: 0 20px 30px rgb(0 0 0 / 15%);
+}
+
+.modes .manual .row .remove {
+    text-decoration: none;
+    font-size: 40px;
+    background: #fff;
+    padding: 15px 30px;
+    border-radius: 45px;
+    color: #f00;
+    box-shadow: 0 20px 30px rgb(0 0 0 / 15%);
+}
+
+.mode.manual a.add {
+    text-decoration: none;
+    font-size: 20px;
+    max-width: 100px;
+    text-align: center;
+    background: #fff;
+    padding: 15px 20px;
+    margin: 100px auto 0;
+    box-shadow: 0 20px 30px rgb(0 0 0 / 15%);
+}
+
+.sidebar .save {
+    text-decoration: none;
+    font-size: 20px;
+    max-width: 100px;
+    text-align: center;
+    background: #fff;
+    padding: 15px 20px;
+    margin: 100px auto 0;
+    box-shadow: 0 20px 30px rgb(0 0 0 / 15%);
+}
