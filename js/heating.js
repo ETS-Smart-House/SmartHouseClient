@@ -230,32 +230,31 @@ async function getData(day) {
 }
 
 function setValuesFromApi(floors) {
-    if (!floors.length) {
-        const modeSelector = document.querySelector('input[id=mode]')
-        modeSelector.checked = false
-        modeSelector.removeAttribute('floor-0-value')
-        modeSelector.removeAttribute('floor-1-value')
 
-        const floorContainers = document.querySelectorAll('.floors .floor')
-        for (const floorContainer of floorContainers) {
-            const autoContainer = floorContainer.querySelector('.mode.auto')
-            const manualContainer = floorContainer.querySelector('.mode.manual')
-            autoContainer.classList.remove('hidden')
-            autoContainer.classList.add('active')
-            manualContainer.classList.add('hidden')
-            manualContainer.classList.remove('active')
+    const modeSelector = document.querySelector('input[id=mode]')
+    modeSelector.checked = false
+    modeSelector.removeAttribute('floor-0-value')
+    modeSelector.removeAttribute('floor-1-value')
 
-            const autoInputValue = autoContainer.querySelector('input[type=number].auto-temp')
-            autoInputValue.value = 22
+    const floorContainers = document.querySelectorAll('.floors .floor')
+    for (const floorContainer of floorContainers) {
+        const autoContainer = floorContainer.querySelector('.mode.auto')
+        const manualContainer = floorContainer.querySelector('.mode.manual')
+        autoContainer.classList.remove('hidden')
+        autoContainer.classList.add('active')
+        manualContainer.classList.add('hidden')
+        manualContainer.classList.remove('active')
 
-            const rows = manualContainer.querySelectorAll('.rows .row')
-            for (const row of rows) {
-                row.remove()
-            }
+        const autoInputValue = autoContainer.querySelector('input[type=number].auto-temp')
+        autoInputValue.value = 22
+
+        const rows = manualContainer.querySelectorAll('.rows .row')
+        for (const row of rows) {
+            row.remove()
         }
-
-        return
     }
+
+    if (!floors.length) return
 
     for (const floor of floors) {
         const floorId = floor['floor']
