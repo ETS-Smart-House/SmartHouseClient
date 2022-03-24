@@ -88,7 +88,6 @@ nav button.light-on {
     width: 500px;
     display: none;
 }
-
 .holder.active,
 .slider.active {
     display: block
@@ -195,6 +194,7 @@ nav button.light-on {
 
 .slider:hover {
     opacity: 1;
+
 }
 
 .slider::-webkit-slider-thumb {
@@ -229,7 +229,7 @@ nav button.light-on {
     .holder .bulp {
         width: 400px;
         height: 400px;
-        top: -500px;
+        top: -5000px;
     }
     nav {
         width: 220px;
