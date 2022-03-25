@@ -10,176 +10,28 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="#" data-location="indoor" class="active">Unutrasnja temperatura</a></li>
-            <li><a href="#" data-location="outdoor">Spoljasnja temperatura</a></li>
-        </ul>
-    </nav>
-    <section class="holder" id="outdoor">
-        <div class="split trenutno">
-            <div class="box">
-                <img id="img" src="../assets/stats/sun.png" alt="Loading img...">
-                <div class="v-line" id="vline"></div>
-                <div class="text">
-                    <div class="temperature">
-                        <p id="temp">19°</p>
-                    </div>
-                    <div class="humidity">
-                        <p>vlažnost</p>
-                        <p id="humidity">60%</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!--ISTORIJA-->
-        <div class="split istorija">
-
-            <div class="h-box">
-                <img src="../assets/stats/sun.png" alt="Loading img...">
-                <div class="h-text">
-                    <div class="txt-section">
-                        <p class="h-temperature">18°</p>
-                        <div class="h-humidity">
-                            <p class="h-humidity">vlažnost</p>
-                            <p>90%</p>
-                        </div>
-                    </div>
-                    <div class="hsx-line"></div>
-                    <div class="h-date">
-                        <p>nedelja, dd.mm.yyyy</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hx-line"></div>
-
-            <div class="h-box">
-                <img src="../assets/stats/cloud.png" alt="Loading img...">
-                <div class="h-text">
-                    <div class="txt-section">
-                        <p class="h-temperature">18°</p>
-                        <div class="h-humidity">
-                            <p class="h-humidity">vlažnost</p>
-                            <p>90%</p>
-                        </div>
-                    </div>
-                    <div class="hsx-line"></div>
-                    <div class="h-date">
-                        <p>subota, dd.mm.yyyy</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hx-line"></div>
-
-            <div class="h-box">
-                <img src="../assets/stats/rainy.png" alt="Loading img...">
-                <div class="h-text">
-                    <div class="txt-section">
-                        <p class="h-temperature">18°</p>
-                        <div class="h-humidity">
-                            <p class="h-humidity">vlažnost</p>
-                            <p>90%</p>
-                        </div>
-                    </div>
-                    <div class="hsx-line"></div>
-                    <div class="h-date">
-                        <p>petak, dd.mm.yyyy</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hx-line"></div>
-
-            <div class="h-box">
-                <img src="../assets/stats/storm.png" alt="Loading img...">
-                <div class="h-text">
-                    <div class="txt-section">
-                        <p class="h-temperature">18°</p>
-                        <div class="h-humidity">
-                            <p class="h-humidity">vlažnost</p>
-                            <p>90%</p>
-                        </div>
-                    </div>
-                    <div class="hsx-line"></div>
-                    <div class="h-date">
-                        <p>cetvrtak, dd.mm.yyyy</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hx-line"></div>
-
-            <div class="h-box">
-                <img src="../assets/stats/rainy.png" alt="Loading img...">
-                <div class="h-text">
-                    <div class="txt-section">
-                        <p class="h-temperature">18°</p>
-                        <div class="h-humidity">
-                            <p class="h-humidity">vlažnost</p>
-                            <p>90%</p>
-                        </div>
-                    </div>
-                    <div class="hsx-line"></div>
-                    <div class="h-date">
-                        <p>sreda, dd.mm.yyyy</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hx-line"></div>
-
-            <div class="h-box">
-                <img src="../assets/stats/sun.png" alt="Loading img...">
-                <div class="h-text">
-                    <div class="txt-section">
-                        <p class="h-temperature">18°</p>
-                        <div class="h-humidity">
-                            <p class="h-humidity">vlažnost</p>
-                            <p>90%</p>
-                        </div>
-                    </div>
-                    <div class="hsx-line"></div>
-                    <div class="h-date">
-                        <p>utorak, dd.mm.yyyy</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hx-line"></div>
-
-            <div class="h-box">
-                <img src="../assets/stats/snowy.png" alt="Loading img...">
-                <div class="h-text">
-                    <div class="txt-section">
-                        <p class="h-temperature">18°</p>
-                        <div class="h-humidity">
-                            <p class="h-humidity">vlažnost</p>
-                            <p>90%</p>
-                        </div>
-                    </div>
-                    <div class="hsx-line"></div>
-                    <div class="h-date">
-                        <p>ponedeljak, dd.mm.yyyy</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="holder active" id="indoor">
-        <div class="split trenutno">
-
-        </div>
-        <!--ISTORIJA-->
-        <div class="split istorija"></div>
-    </section>
-    <script src="/js/stats.js"></script>
+<nav>
+    <ul>
+        <li><a href="#" data-location="indoor" class="active">Unutrasnja temperatura</a></li>
+        <li><a href="#" data-location="outdoor">Spoljasnja temperatura</a></li>
+    </ul>
+</nav>
+<section class="holder" id="outdoor">
+    <div class="split trenutno">
+    </div>
+    <!--ISTORIJA-->
+    <div class="split istorija">
+    </div>
+</section>
+<section class="holder active" id="indoor">
+    <div class="split trenutno"></div>
+    <!--ISTORIJA-->
+    <div class="split istorija"></div>
+</section>
+<script src="/js/stats.js"></script>
 </body>
 
 </html>

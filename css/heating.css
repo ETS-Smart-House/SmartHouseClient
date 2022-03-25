@@ -77,14 +77,14 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-    border-radius: 45px;
+    /*border-radius: 45px;*/
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
 }
 
 input[type="number"] {
     -moz-appearance: textfield;
     text-align: center;
-    font-size: 40px;
+    font-size: 20px;
     border: none;
     background-color: #ffffff;
     color: #202030;
@@ -111,13 +111,16 @@ input::-webkit-inner-spin-button {
 }
 
 .decrement {
-    padding: 15px 5px 15px 25px;
-    border-radius: 45px 0 0 45px;
+    /*padding: 15px 5px 15px 25px;*/
+    /*border-radius: 45px 0 0 45px;*/
+    padding: 5px;
+
 }
 
 .increment {
-    padding: 15px 25px 15px 5px;
-    border-radius: 0 45px 45px 0;
+    /*padding: 15px 25px 15px 5px;*/
+    /*border-radius: 0 45px 45px 0;*/
+    padding: 5px;
 }
 
 .modes .auto input[type="number"] {
@@ -275,10 +278,10 @@ input::-webkit-inner-spin-button {
 }
 
 .rows .row input[type=time] {
-    padding: 20px;
+    padding: 15px;
     margin: 0 15px;
-    border-radius: 45px;
-    font-size: 30px;
+    /*border-radius: 45px;*/
+    font-size: 20px;
     border: 0;
     box-shadow: 0 20px 30px rgb(0 0 0 / 15%);
 }
@@ -287,8 +290,8 @@ input::-webkit-inner-spin-button {
     text-decoration: none;
     font-size: 40px;
     background: #fff;
-    padding: 15px 30px;
-    border-radius: 45px;
+    padding: 5px 30px;
+    /*border-radius: 45px;*/
     color: #f00;
     box-shadow: 0 20px 30px rgb(0 0 0 / 15%);
 }

@@ -15,8 +15,6 @@ calendarContainer.addEventListener('changeDate', async (e) => {
 
     const response = await getData(day)
 
-    console.log(response)
-
     setValuesFromApi(response)
 })
 
@@ -99,7 +97,6 @@ function removeRow(el) {
     let rows = document.querySelectorAll(`.${floorSelector} .rows .row`)
     if (rows.length > 1) row.remove()
     rows = document.querySelectorAll(`.${floorSelector} .rows .row`)
-    console.log(rows.length)
     if (rows.length === 1) rows[0].querySelector('.remove').classList.add('hidden')
 }
 
@@ -318,8 +315,6 @@ async function save(e) {
         const value = floorContainer.querySelector('.mode.auto input[name=auto-temp]').value
         const mode = modeSelector.getAttribute(`floor-${floor}-value`) ?? 'auto'
 
-        console.log(mode)
-
         const periodsData = []
         const periods = floorContainer.querySelectorAll('.mode.manual .rows .row')
         for (const period of periods) {
@@ -341,8 +336,6 @@ async function save(e) {
             periods: periodsData
         })
     }
-
-    console.log(data)
 
     await axios.post(apiUrl, data)
 
