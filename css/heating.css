@@ -66,6 +66,7 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
+    text-align: center;
     transform: translate(-50%, -50%);
 }
 
@@ -268,7 +269,7 @@ input::-webkit-inner-spin-button {
 
 .rows {
     margin-top: 10px;
-    max-height: 600px;
+    max-height: 320px;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -318,8 +319,15 @@ input::-webkit-inner-spin-button {
     box-shadow: 0 20px 30px rgb(0 0 0 / 15%);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1800px) {
     .rows .row {
-        max-width: 400px;
+        max-width: 800px;
+    }
+    .sidebar .switch-button{
+    top: 20px;
+    }
+    .sidebar .save{
+        position: relative;
+        top: -10px;
     }
 }

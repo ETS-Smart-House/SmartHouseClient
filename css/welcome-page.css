@@ -396,17 +396,24 @@
     }
     
     @media only screen and (max-width: 1200px) {
+        .content {
+            max-width: 800px;
+            margin: -50px auto;
+        }
+        .content .about .controls li{
+            margin: 10px;
+        }
         .content .about .controls li .stats {
-            padding: 30px 70px;
+            padding: 20px 50px;
         }
         .content .about .controls li .dropdown button {
-            padding: 30px 70px;
+            padding: 20px 50px;
         }
         .content .about .controls li .dropdown-content a {
-            padding: 17px 50px;
+            padding: 20px 50px;
         }
     }
-    
+/*     
     @media only screen and (max-width: 1100px) {
         img {
             width: 300px;
@@ -460,9 +467,9 @@
             padding: 20px 30px;
             width: 200px;
         }
-    }
+    } */
     
-    @media only screen and (max-width: 1000px) {
+    /* @media only screen and (max-width: 1000px) {
         .content {
             max-width: 800px;
             max-height: 300px;
@@ -514,9 +521,9 @@
             display: flex;
             margin-left: 150px;
         }
-    }
+    } */
     
-    @media only screen and (max-width: 600px) {
+    /* @media only screen and (max-width: 600px) {
         .content {
             flex-direction: column;
             margin: 10px auto;
@@ -575,10 +582,10 @@
             border-radius: 20px;
         }
     }
-    
-    @media only screen and (max-height: 600px) {
+     */
+    /* @media only screen and (max-height: 600px) {
         .content {
-            margin: 50px auto;
+            margin: -50px auto;
         }
         img {
             width: 300px;
@@ -591,12 +598,21 @@
             display: flex;
             margin-left: 150px;
         }
+        .content .about {
+            position: relative;
+            left: 100px;
+            justify-content: center;
+            max-width: 500px;
+        }
         .content .about .description {
             letter-spacing: 1px;
             max-width: 300px;
             padding: 10px;
             font-size: 10pt;
             margin-bottom: 0px;
+        }
+        .content .about .controls{
+            background-color: ;
         }
         .content .about .controls li .stats {
             font-size: 15pt;
@@ -615,4 +631,4 @@
         .content .about .controls li .stats {
             border-radius: 40px;
         }
-    }
+    } */
